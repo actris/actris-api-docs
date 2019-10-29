@@ -4,6 +4,7 @@
 
 ## Get a list of all files
 
+'''
 **Response: JSON Array of Objects:**
 
 **file_id** (int) - file identifier
@@ -39,11 +40,11 @@
 **Status Codes:	** 500 Internal Server Error
               error-code (int) – application error
 
+'''
+
+'''
 ## Example request:
 > GET /api/files **HTTPS**/1.1
 > Host: https://actris-rest-api.nilu.no
 > Accept: application/json
-
-
-
-
+'''
