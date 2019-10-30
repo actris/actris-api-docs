@@ -2,9 +2,7 @@
 
 ## Get list of all files
 
-```
-GET /api/files
-```
+> GET /api/files
 
 **Response: JSON Array of Objects:**
 
@@ -65,13 +63,11 @@ GET /api/files
 
 ## Example request:
 
-```
-GET /api/files **HTTPS**/1.1
+> GET /api/files **HTTPS**/1.1
 
-Host: https://actris-rest-api.nilu.no
+> Host: https://actris-rest-api.nilu.no
 
-Accept: application/json
-```
+> Accept: application/json
 
 ## Example response:
 
