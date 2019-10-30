@@ -120,15 +120,34 @@ Get information on ACTRIS datasets
 **Response: JSON Array of Objects:**
 
 **location_name** (string) - name of station location
+
 **location_id** (string) - data center unit specific identifier
+
 **location_description** (string) - free text description of the site
+
 **station_gaw_name** (string) - name as listed in gawsis
+
 **station_gaw_id** (string) - gaw identifier
+
 **station_latitude** (float) - location latitude
+
 **station_longitude** (float) - location longitude
+
 **Station altitude** (string) - location altitude
+
 **Station land use** (string) - land use
+
 **Station setting** (string) - station setting 
+
+## Example request:
+
+> GET /api/locations HTTPS/1.1
+
+> Host: https://actris-rest-api.nilu.no
+
+> Accept: application/json
+
+## Example response:
 
 ```
 [{
@@ -149,37 +168,101 @@ Get information on ACTRIS datasets
 
 > GET /api/repositories
 
-dc_unit_id
-dc_unit_acronym
-dc_unit_name
-dc_unit_contact
-dc_unit_description
+**dc_unit_id** (int) - data center identifier
 
-dc_unit_id
-dc_unit_acronym
-dc_unit_name
-dc_unit_contact
-dc_unit_description
+**dc_unit_acronym** (string) - acronym of data center
+
+**dc_unit_name** (string) - data center unit full name
+
+**dc_unit_contact** (string) - data center unit contact
+
+**dc_unit_description** (string) - description of the data center unit
+
+**dc_unit_url** (string) - url of data center unit
+## Example request:
+
+> GET /api/repositories HTTPS/1.1
+
+> Host: https://actris-rest-api.nilu.no
+
+> Accept: application/json
+
+## Example response:
+
+```
+[{
+"dc_unit_id": "2",
+"dc_unit_acronym": "ARES",
+"dc_unit_name": "Aerosol remote sensing data centre unit",
+"dc_unit_contact": "First name, Last Name",
+"dc_unit_description": "The ARES data centre unit provides a data curation and data processing service for aerosol remote sensing data coming frm lidar and photometer obsrevations.",
+"dc_unit_url": "datacenter.com"
+}]
+```
 
 # variable
 
 > GET /api/variables/
 
+**variable_id** (int) - variable identifier
+
+**variable_name** (string) - actris variables name
+
+**variable_description** (string) - description of variable
+
+**wmo_code** (int) - wmo observation variable code
+
+**cf_name** (string) - cf standard name
+
+## Example request:
+
+> GET /api/variables HTTPS/1.1
+
+> Host: https://actris-rest-api.nilu.no
+
+> Accept: application/json
+
+## Example response:
+
+```
+[{
+	"variable_id": 22,
+	"variable_name": "temperature",
+	"variable_description": "air temperature, kelvin",
+	"wmo_code": 319,
+	"cf_name": "air_temperature"
+
+}]
+```
 
 # instrument
 
 > GET /api/instruments/
 
-Instrument type:                           
-Instrument manufacturer:                   
-Instrument model:                          
-Instrument name:                          
+**Instrument type** (string) - Instrument type
 
+**Instrument manufacturer** (string) - instrument manufacturer
 
+**Instrument model** (string) - instrument model
 
-Instrument type:                          filter_absorption_photometer 
-Instrument manufacturer:                  Radiance-Research 
-Instrument model:                         PSAP-3W 
-Instrument name:                          Radiance-Research_PSAP-3W_BIR_dry
+**Instrument name** (string) - instrument name
 
+## Example request:
+
+> GET /api/instruments HTTPS/1.1
+
+> Host: https://actris-rest-api.nilu.no
+
+> Accept: application/json
+
+## Example response:
+
+```
+[{
+	"Instrument type": "filter_absorption_photometer",
+	"Instrument manufacturer": "Radiance-Research",
+	"Instrument model": "PSAP-3W",
+	"Instrument name": "Radiance-Research_PSAP-3W_BIR_dry"
+}]
+```
 
