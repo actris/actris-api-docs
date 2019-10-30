@@ -63,7 +63,7 @@
 
 ## Example request:
 
-> GET /api/files **HTTPS**/1.1
+> GET /api/files HTTPS/1.1
 
 > Host: https://actris-rest-api.nilu.no
 
@@ -72,6 +72,7 @@
 ## Example response:
 
 > HTTPS/1.1 200 OK
+
 > Content-Type: application/json
 
 ```
