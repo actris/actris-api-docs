@@ -1,6 +1,6 @@
 # Get list of all files
 
-GET /api/files
+> GET /api/files
 
 **Response: JSON Array of Objects:**
 
