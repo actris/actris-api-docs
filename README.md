@@ -1,4 +1,6 @@
-# Get list of all files
+# Files
+
+## Get list of all files
 
 ```
 GET /api/files
