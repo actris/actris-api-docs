@@ -1,5 +1,7 @@
 # Files
 
+Get information on ACTRIS datasets
+
 ## Get list of all files
 
 > GET /api/files
@@ -58,6 +60,10 @@
 
 **producttype** (string) - product type in the data file
 
+**isrestricted** (bool) - access restriction in terms of password
+
+**program_affiliation** (string) - associated projects and networks
+
 **Status Codes:	** 500 Internal Server Error
               error-code (int) – application error
 
@@ -88,7 +94,7 @@
 	"filegenerationdate": "2019 - 06 - 14 T00: 00: 00 UTC",
 	"gml_beginposition": "2018 - 02 - 23 T12: 00: 00 Z",
 	"gml_endposition": "2018 - 12 - 11 T00: 00: 00 Z",
-	"platform": "station",
+	"platform": "groundbased",
 	"alt": "474.0 m",
 	"long": "011° 53 '12 East",
 	"lat": "78° 54 '26 North",
@@ -102,9 +108,78 @@
 	"description": "Ground based in situ observations of high_vol_sampler at Zeppelin mountain (Ny-Ålesund) (NO0042G). These measurements are gathered as a part of the following projects EMEP_preliminary, CAMP, AMAP, NILU and they are stored in the EBAS database (http://ebas.nilu.no/). Parameters measured are: FTS_6-2 in air+aerosol (mass_concentration_of_6_:_2_flourotelomer_sulfonic_acid_in_aerosol), FTS_8-2 in air+aerosol, PFBS in air+aerosol (mass_concentration_of_perfluorobutanesulfonic_acid_in_aerosol), PFDA in air+aerosol, PFDS in air+aerosol, PFDoDA in air+aerosol (mass_concentration_of_perfluorododecanoic_acid_in_aerosol), PFHpA in air+aerosol (mass_concentration_of_perfluoroheptanoic_acid_in_aerosol), PFHpS in air+aerosol, PFHxA in air+aerosol (mass_concentration_of_perfluorohexanoic_acid_in_aerosol), PFHxS in air+aerosol (mass_concentration_of_perfluorohexane_sulfonic_acid_in_aerosol), PFNA in air+aerosol (mass_concentration_of_perfluorononanoic_acid_in_aerosol), PFNS in air+aerosol, PFOA in air+aerosol (mass_concentration_of_perfluorooctanoic_acid_in_aerosol), PFPS in air+aerosol, PFTeDA in air+aerosol, PFTrDA in air+aerosol",
 	"originatingdatacenter": "In-Situ",
 	"dataversion": 1.0,
-	"producttype": "mass_concentration_of_perfluorohexane_sulfonic_acid_in_aerosol"
+	"producttype": "mass_concentration_of_perfluorohexane_sulfonic_acid_in_aerosol",
+	"program_affiliation": "EMEP, CAMP, AMAP, NILU"
 }]
 ```
 
+# Location
+
+> GET /api/locations/
+
+**Response: JSON Array of Objects:**
+
+**location_name** (string) - name of station location
+**location_id** (string) - data center unit specific identifier
+**location_description** (string) - free text description of the site
+**station_gaw_name** (string) - name as listed in gawsis
+**station_gaw_id** (string) - gaw identifier
+**station_latitude** (float) - location latitude
+**station_longitude** (float) - location longitude
+**Station altitude** (string) - location altitude
+**Station land use** (string) - land use
+**Station setting** (string) - station setting 
+
+```
+[{
+	"location_name": "Birkenes",
+	"location_id": "NO0001R",
+	"location_description": "The terrain is undulating and the site is located in a clearing with relatively free exposure to exchange of air masses by wind. The site provides data on deposition in support of effect oriented studies (surface water acidification, forest damage, material deterioration etc.). Data for the site are applied for the following monitoring programmes; EMEP, ICP Waters, ICP Forest, ICP Integrated Monitoring, ICP Materials, The Norwegian Air and Precipitation Monitoring Programme, the Norwegian Monitoring Programme on Forest Damage (OPS), and others.",
+	"Station GAW-Name": "Birkenes Atmospheric Observatory",
+	"Station GAW-ID": "BIR",
+	"Station latitude": 58.380,
+	"Station longitude": 8.250,
+	"Station altitude": "220m",
+	"Station land use": "Forest",
+	"Station setting": "Rural"
+}]
+```
+
+# Repository
+
+> GET /api/repositories
+
+dc_unit_id
+dc_unit_acronym
+dc_unit_name
+dc_unit_contact
+dc_unit_description
+
+dc_unit_id
+dc_unit_acronym
+dc_unit_name
+dc_unit_contact
+dc_unit_description
+
+# variable
+
+> GET /api/variables/
+
+
+# instrument
+
+> GET /api/instruments/
+
+Instrument type:                           
+Instrument manufacturer:                   
+Instrument model:                          
+Instrument name:                          
+
+
+
+Instrument type:                          filter_absorption_photometer 
+Instrument manufacturer:                  Radiance-Research 
+Instrument model:                         PSAP-3W 
+Instrument name:                          Radiance-Research_PSAP-3W_BIR_dry
 
 
