@@ -1,8 +1,4 @@
-# Files
-
-Get information on ACTRIS datasets
-
-## Upload file metadata
+# Upload file metadata
 
 > PUT /api/files/create
 
@@ -87,10 +83,14 @@ Get information on ACTRIS datasets
 
 ## Example request
 > PUT /api/files/create HTTPS/1.1
-Host: https://actris-rest-api.nilu.no
-Accept: application/json
-Content-Type: application/json
 
+> Host: https://actris-rest-api.nilu.no
+
+> Accept: application/json
+
+> Content-Type: application/json
+
+```
 [{
 	"file_id": 1234,
 	"filename": "NO0042G.20180212000000.20190614000000.high_vol_sampler..air+aerosol.10mo.4w.NO01L_fppuf_42a.NO01L_NILU.lev2.nc",
@@ -120,9 +120,11 @@ Content-Type: application/json
 	"producttype": "mass_concentration_of_perfluorohexane_sulfonic_acid_in_aerosol",
 	"program_affiliation": "EMEP, ACTRIS"
 }]
+```
 
 ## Example response
 > HTTPS/1.1 201 OK
+
 > Content-Type: application/json
 
 [{
@@ -132,8 +134,7 @@ Content-Type: application/json
 	"atom": "https://actris-rest-api.nilu.no/files/id/1234"
 }]
 
-
-## Get list of all files
+# Get list of all files
 
 > GET /api/files
 
