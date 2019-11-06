@@ -127,12 +127,14 @@
 
 > Content-Type: application/json
 
+```
 [{
 	"file_id": 1234,
 	"message": "Created",
 	"http-status-code": "201",
 	"atom": "https://actris-rest-api.nilu.no/files/id/1234"
 }]
+```
 
 # Get list of all files
 
