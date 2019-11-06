@@ -82,6 +82,7 @@
 			  410 - Filename conflict
 
 #### Example request
+
 > PUT /api/files/create HTTPS/1.1
 
 > Host: https://actris-rest-api.nilu.no
@@ -123,6 +124,7 @@
 ```
 
 #### Example response
+
 > HTTPS/1.1 201 OK
 
 > Content-Type: application/json
