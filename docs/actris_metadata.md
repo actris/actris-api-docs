@@ -147,13 +147,14 @@
 ### product type:
 	* model
 	* observation
+	* material constant
 
 ### matrix/topic/compartment
 	* Fixed list [cloud, gas, particle, met]
 	* Change the vocabulary
 	* Subject to change (topic, matrix, compartment ...)
-	
-#### Sub matrix
+
+### Sub matrix
 	* create example list, Markus
 	
 ### Instrument type
@@ -161,12 +162,17 @@
 	* Multiple entries
 	
 ### program affiliation
-	* list 
+	* [GAW-WDCA, EMEP, EUROCHAMP?, NDACC, ARM,] 
+	
 ### legacy data
 	* True/False
-	' data before ACTRIS RI
+	* data before ACTRIS RI
+	
+### data level
+	* Fixed list 
 
 ### data product
+	* absorption-spectra, growth factor ++
 
 ### ASC
 
