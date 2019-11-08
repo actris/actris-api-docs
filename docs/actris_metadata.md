@@ -148,12 +148,23 @@
 	* model
 	* observation
 
-### matrix
-	* Fixed list [cloud, gas, particle]
-	
+### matrix/topic/compartment
+	* Fixed list [cloud, gas, particle, met]
 	* Change the vocabulary
+	* Subject to change (topic, matrix, compartment ...)
 	
-### Sub matrix
+#### Sub matrix
+	* create example list, Markus
+	
+### Instrument type
+	* Fixed list (optional)
+	* Multiple entries
+	
+### program affiliation
+	* list 
+### legacy data
+	* True/False
+	' data before ACTRIS RI
 
 ### data product
 
