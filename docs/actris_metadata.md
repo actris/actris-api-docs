@@ -2,6 +2,11 @@
 
 ## General metadata
 
+| Metadata | Name |	DataType |	Obligation | Description | Reference | Example |
+|----------|------|----------|-------------|-------------|-----------|---------|
+|		   |	  |          |             |             |           |         |
+
+
 	> fileIdentifier
 	> language
 	> characterSet
@@ -86,53 +91,63 @@
 ## EX_GeographicBoundingBox
 
 	> westBoundLongitude
-eastBoundLongitude
-southBoundLatitude
-northBoundLatitude
+	> eastBoundLongitude
+	> southBoundLatitude
+	> northBoundLatitude
 
 ## Temporal extent
 	
-	extent
-	gml:TimePeriod
-	gml:TimePeriodBegin
-	gml:TimePeriodEnd
+	> extent
+	> gml:TimePeriod
+	> gml:TimePeriodBegin
+	> gml:TimePeriodEnd
 
 ## Vertical extent
-	minimumValue
-	maximumValue
-	unitOfMeasure
+	> minimumValue
+	> maximumValue
+	> unitOfMeasure
 
 ## Content information
 
-attributeDescription - component name
-contentType
+	> attributeDescription - component name
+	> contentType
 
 ### Coverage information
 
 
 ### Distribution informaition
 
-	name of data format
-	version - version number of the transfer format
-	transfer size
+	> name of data format
+	> version - version number of the transfer format
+	> transfer size
 
 ### Online data resource
 
-	linkage	URL
-	protocol	String
-	description	String
-	function	CodeList B.5.3
+	> linkage	URL
+	> protocol	String
+	> description	String
+	> function	CodeList B.5.3
 
 ## Data quality information
 
 ### DQ_Scope		
-	level 	CodeList B.5.25
+	> level 	CodeList B.5.25
 ### LI_Lineage		
-	statement	String
+	> statement	String
 ### LI_ProcessStep		
-	description	String
+	> description	String
 
-## What do we need in addition to this?
- - What about transfer of level 3 metadata?
+## Specific data center unit metadata
 
+### ASC
+
+### In Situ
+
+### ARES
+
+### CLU
+
+### GRES
+
+### Level 3 data products
 
