@@ -147,7 +147,7 @@
 ### product type:
 	* model
 	* observation
-	* material constant
+	* fundamental parameter
 
 ### matrix/topic/compartment
 	* Fixed list [cloud, gas, particle, met]
@@ -169,10 +169,18 @@
 	* data before ACTRIS RI
 	
 ### data level
-	* Fixed list 
+	* Fixed list of what is in the DMP
+
+### data sublevel
+
+### isrestricted 
+	* True/False
 
 ### data product
 	* absorption-spectra, growth factor ++
+	
+### Property instead of variable?
+	* In ACTRIS, DMP is calling everything ACTRIS variables, but need to discuss this
 
 ### ASC
 
@@ -186,3 +194,5 @@
 
 ### Level 3 data products
 
+## Other
+- Consistent metadata element names
