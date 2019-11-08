@@ -203,3 +203,4 @@
 
 ## Other
 - Consistent metadata element names
+- ACTRIS list: Create station list including GAW code and coordinates (from GAWSIS)
