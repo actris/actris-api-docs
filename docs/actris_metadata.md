@@ -137,7 +137,25 @@
 ### LI_ProcessStep		
 	> description	String
 
-## Specific data center unit metadata
+## Specific data center unit metadata (mandatory)
+
+### platform type:
+	* Surface station
+	* Simulation chamber
+	* ballon
+
+### product type:
+	* model
+	* observation
+
+### matrix
+	* Fixed list [cloud, gas, particle]
+	
+	* Change the vocabulary
+	
+### Sub matrix
+
+### data product
 
 ### ASC
 
