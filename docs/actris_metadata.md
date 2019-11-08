@@ -71,6 +71,7 @@
 	> accessConstraints
 	> useConstraints
 	> otherConstraints
+	* How to get access, check with metadata elements in the WIS profile
 
 ## Metadata keywords
 
@@ -175,6 +176,12 @@
 
 ### isrestricted 
 	* True/False
+	* Description
+	
+### licence
+	* machine-reable
+	* optional, check with WIS profile how to give licence information
+	* Include licence on metadata
 
 ### data product
 	* absorption-spectra, growth factor ++
