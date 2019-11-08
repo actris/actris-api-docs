@@ -2,9 +2,9 @@
 
 ## General metadata
 
-| Metadata | Name |	DataType |	Obligation | Description | Reference | Example |
-|----------|------|----------|-------------|-------------|-----------|---------|
-|		   |	  |          |             |             |           |         |
+| Metadata  Name |	DataType |	Obligation | Description | Reference | Example |
+|----------------|----------|-------------|-------------|-----------|---------|
+|	file identifier	   | string	  |          |             |             |           |         |
 
 
 	> fileIdentifier
