@@ -88,6 +88,7 @@
 	> Station WMO region
 	> Country
 	> Station name
+	> Station GAW-ID/ACTRIS ID
 
 ## EX_GeographicBoundingBox
 
