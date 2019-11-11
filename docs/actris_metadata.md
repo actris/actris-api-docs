@@ -11,7 +11,7 @@ Metadata related to the metadata
 | fileIdentifier        | file_identifier                  | string    | Unique identifier for this metadata file, following internal file naming convention                                                       | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
 | language              | language                         | string    | language used for documenting metadata (WIS requires english ""en"")                                                                      | en                                                                   |
 | characterSet          | character_set                    | string    | Full name of the character coding standard used for the metadata set                                                                      | utf8                                                                 |
-| hierarchyLevel        | hierarchy_level                  | string    | scope to which the metadata applies: (WIS requires ""dataset"" or ""series"", where ""series"" describes a collection of single datasets) | dataset                                                              |
+| hierarchyLevel        | hierarchy_level                  | string    | scope to which the metadata applies: "dataset"" or ""series"", where ""series"" describes a collection datasets 						   | dataset                                                              |
 | datestamp             | datestamp                        | date      | date that the metadata was created                                                                                                        | 2012-05-20T09:45:00)                                                 |
 
 ### Contact
@@ -71,67 +71,77 @@ Metadata related to the dataset.
 
 ## MD_Constraints
 
-	> accessConstraints
-	> useConstraints
-	> otherConstraints
-	* How to get access, check with metadata elements in the WIS profile
+| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                 | Example                                     |
+|-----------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|---------------------------------------------|
+| accessConstraints     | CodeList B.5.24                  | string    | access constraints of the published data                                                    | otherRestrictions                           |
+| useConstraints        | CodeList B.5.24                  | string    | any special restrictions or limitations or warnings on using the data                       | otherRestrictions                           |
+| otherConstraints      | string                           | string    | other restrictions and legal prerequisites for accessing and using the resource or metadata | https://www.gaw-wdca.org/Browse-Obtain-Data |
+| dataLicence           | data_licence                     | string    | fixed list of available licences                                                            | To be decided                               |
+| metadataLicence       | metadata_licence                 | string    | fixed list of available licences                                                            | To be decided                               |
 
 ## MD_Keywords
 
-	> keyword
-	> type
+| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                          | Example                           |
+|-----------------------|----------------------------------|-----------|--------------------------------------------------------------------------------------|-----------------------------------|
+| keyword               | keyword                          | string    | keyword(s) describing the theme of the dataset, preferably from the WMO keyword list | Aerosol, Atmospheric, Measurement |
 
 ## MD_DataIdentification
 
-	> language
-	> characterSet
-	> topicCategory
-	> description
+| Metadata element name | Metadata element REST API syntax | Data type       | Description                                                     | Example                                      |
+|-----------------------|----------------------------------|-----------------|-----------------------------------------------------------------|----------------------------------------------|
+| language              | language                         | string          | language used within the dataset                                | en                                           |
+| characterSet          | character_set                    | CodeList B.5.10 | full name of the character coding standard used for the dataset | utf8                                         |
+| topicCategory         | topic_category                   | CodeList B.5.27 | main theme(s) of the dataset                                    | climatologyMeteorologyAtmosphere             |
+| description           | description                      | string          | description of spatial and temporal extent for the dataset      | time series of point measurements at surface |
+| code                  | station_wmo_region               | string          | Station WMO region                                              | VI - Europe                                  |
+| code                  | country_name                     | string          | country the measurement site is located in (in english)         | Norway                                       |
+| code                  | station_name                     | string          | Name of station, platform or observatory                        | Birkenes                                     |
+| code                  | station_identifier               | string          | Identifier of station/observatory based on GAW-ID               | BIR                                          |
 
-	> Station WMO region
-	> Country
-	> Station name
-	> Station GAW-ID/ACTRIS ID
+## GeographicBoundingBox
 
-## EX_Extent
-
-	> westBoundLongitude
-	> eastBoundLongitude
-	> southBoundLatitude
-	> northBoundLatitude
+| Metadata element name | Metadata element REST API syntax | Data type | Description                                                                                                                            | Example |
+|-----------------------|----------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------|---------|
+| westBoundLongitude    | west_bound_longitude             | decimal   | western-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | +3.12   |
+| eastBoundLongitude    | east_bound_longitude             | decimal   | eastern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | +3.13   |
+| southBoundLatitude    | south_bound_latitude             | decimal   | southern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve northt) | +42.25  |
+| northBoundLatitude    | north_bound_latitude             | decimal   | northern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve north)  | +42.26  |
 
 ## Temporal extent
 	
-	> extent
-	> gml:TimePeriod
-	> gml:TimePeriodBegin
-	> gml:TimePeriodEnd
+| Metadata element name | Metadata element REST API syntax | Data type | Description        | Example             |
+|-----------------------|----------------------------------|-----------|--------------------|---------------------|
+| TimePeriodBegin       | time_period_begin                | date      | dataset start time | yyyy-mm-ddThh-mm-ss |
+| TimePeriodEnd         | time_period_end                  | date      | dataset end time   | yyyy-mm-ddThh-mm-ss |
 
 ## Vertical extent
-	> minimumValue
-	> maximumValue
-	> unitOfMeasure
+
+| Metadata element name | Metadata element REST API syntax | Data type | Description                                                                  | Example                       |
+|-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------|-------------------------------|
+| minimumValue          | minimum_value                    | Real      | lowest vertical extent contained in the dataset (altitude of the instrument) | station altitude + height agl |
+| maximumValue          | maximum_value                    | Real      | highest vertical extent contained in the dataset (reach of instrument)       | station altitude + height agl |
+| unitOfMeasure         | unit_of_measure                  | String    | unit of measure (→WIS requires "m above sea level")                          | m above sea level             |
 
 ## Content information
 
-	> attributeDescription - component name
-	> contentType
+| Metadata element name | Metadata element REST API syntax | Data type      | Description                                                                   | Example             |
+|-----------------------|----------------------------------|----------------|-------------------------------------------------------------------------------|---------------------|
+| attributeDescription  | attribute_description            | string         | parameter name                                                                | air_temperature     |
+| contentType           | content_type                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | physicalMeasurement |
 
-### Coverage information
 
-
-### Distribution informaition
+### Distribution informaition (online resource)
 
 	> name of data format
 	> version - version number of the transfer format
 	> transfer size
-
-### Online data resource
-
 	> linkage	URL
 	> protocol	String
 	> description	String
 	> function	CodeList B.5.3
+ 	> isRestricted 
+			* True/False
+		* Description
 
 ## Data quality information
 
@@ -142,7 +152,7 @@ Metadata related to the dataset.
 ### LI_ProcessStep		
 	> description	String
 
-## Specific data center unit metadata (mandatory)
+## Other
 
 ### platform type:
 	* Surface station
@@ -178,35 +188,8 @@ Metadata related to the dataset.
 
 ### data sublevel
 
-### isrestricted 
-	* True/False
-	* Description
-	
-### dataLicence
-	* machine-reable
-	* optional, check with WIS profile how to give licence information
-
-
-### metadataLicence
-
 ### data product
 	* absorption-spectra, growth factor ++
 	
 ### Property instead of variable?
 	* In ACTRIS, DMP is calling everything ACTRIS variables, but need to discuss this
-
-### ASC
-
-### In Situ
-
-### ARES
-
-### CLU
-
-### GRES
-
-### Level 3 data products
-
-## Other
-- Consistent metadata element names
-- ACTRIS list: Create station list including GAW code and coordinates (from GAWSIS)
