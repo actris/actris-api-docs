@@ -6,14 +6,13 @@ Metadata related to the metadata
 
 ### Metadata specific metadata
 
-| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                         | Example                                                              |
-|-----------------------|----------------------------------|-----------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| fileIdentifier        | file_identifier                  | String    | Unique identifier for this metadata file, following internal file naming convention | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
-|  language             | language                         | String    | language used for documenting metadata (WIS requires english ""en"")                | en                                                                   |
-|  characterSet         | character_set                    | String    | Full name of the character coding standard used for the metadata set                | utf8                                                                 |
-|  hierarchyLevel       | hierarchy_level                  | string    |  scope to which the metadata applies: (WIS requires ""dataset"" or ""series"", where ""series"" describes a collection of single datasets)  | dataset                                                                      |
-|  datestamp            | datestamp                        | date      |  date that the metadata was created                                                                                   |                                      2012-05-20T09:45:00)                                |
-
+| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                                                               | Example                                                              |
+|-----------------------|:--------------------------------:|----------:|-------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| fileIdentifier        |          file_identifier         |    String | Unique identifier for this metadata file, following internal file naming convention                                                       | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
+| language              |             language             |    String | language used for documenting metadata (WIS requires english ""en"")                                                                      | en                                                                   |
+| characterSet          |           character_set          |    String | Full name of the character coding standard used for the metadata set                                                                      | utf8                                                                 |
+| hierarchyLevel        | hierarchy_level                  | string    | scope to which the metadata applies: (WIS requires ""dataset"" or ""series"", where ""series"" describes a collection of single datasets) | dataset                                                              |
+| datestamp             | datestamp                        | date      | date that the metadata was created                                                                                                        | 2012-05-20T09:45:00)                                                 |
 
 ### Contact
 
