@@ -1,18 +1,19 @@
 # ACTRIS metadata elements
 
-* [MD_metadata](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_metadata)
-* [MD_DataIdentification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification)
-* [MD_Constraints](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_constraints)
-* [MD_Keywords](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_keywords)
-* [MD_DataIdentification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification-1)
-* [GeographicBoundingBox](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#geographicboundingbox)
-* [Temporal extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#temporal-extent)
-* [Vertical extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#vertical-extent)
-* [Content information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#content-information)
-* [Data quality information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#data-quality-information)
-* [Other](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#other)
+* [md_metadata](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_metadata)
+* [md_identification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification)
+* [md_constraints](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_constraints)
+* [md_keywords](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_keywords)
+* [md_data_identification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification-1)
+* [ex_geographic_bounding_box](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#geographicboundingbox)
+* [ex_temporal_extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#temporal-extent)
+* [ex_vertical_extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#vertical-extent)
+* [md_content_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#content-information)
+* [md_distribution_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#distribution-information)
+* [dq_data_quality_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#data-quality-information)
+* [md_actris_specific](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#other)
 
-## MD_metadata
+## md_metadata
 
 Metadata related to the metadata
 
@@ -48,7 +49,7 @@ Metadata related to the metadata
 | linkage               | linkage                          | URL       | web address of the data center | http://ebas.nilu.no/ |
 
 
-## MD_DataIdentification
+## md_identification
 
 Metadata related to the dataset.
 
@@ -81,7 +82,7 @@ Metadata related to the dataset.
 |-----------------------|----------------------------------|-----------|--------------------------------|----------------------|
 | linkage               | linkage                          | URL       | web address of the data center | http://ebas.nilu.no/ |
 
-## MD_Constraints
+## md_constraints
 
 | Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                 | Example                                     |
 |-----------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|---------------------------------------------|
@@ -91,13 +92,13 @@ Metadata related to the dataset.
 | dataLicence           | data_licence                     | string    | fixed list of available licences                                                            | To be decided                               |
 | metadataLicence       | metadata_licence                 | string    | fixed list of available licences                                                            | To be decided                               |
 
-## MD_Keywords
+## md_keywords
 
 | Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                          | Example                           |
 |-----------------------|----------------------------------|-----------|--------------------------------------------------------------------------------------|-----------------------------------|
 | keyword               | keyword                          | string    | keyword(s) describing the theme of the dataset, preferably from the WMO keyword list | Aerosol, Atmospheric, Measurement |
 
-## MD_DataIdentification
+## md_data_identification
 
 | Metadata element name | Metadata element REST API syntax | Data type       | Description                                                     | Example                                      |
 |-----------------------|----------------------------------|-----------------|-----------------------------------------------------------------|----------------------------------------------|
@@ -110,7 +111,7 @@ Metadata related to the dataset.
 | code                  | station_name                     | string          | Name of station, platform or observatory                        | Birkenes                                     |
 | code                  | station_identifier               | string          | Identifier of station/observatory based on GAW-ID               | BIR                                          |
 
-## GeographicBoundingBox
+## ex_geographic_bounding_box
 
 | Metadata element name | Metadata element REST API syntax | Data type | Description                                                                                                                            | Example |
 |-----------------------|----------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------|---------|
@@ -119,14 +120,14 @@ Metadata related to the dataset.
 | southBoundLatitude    | south_bound_latitude             | decimal   | southern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve northt) | +42.25  |
 | northBoundLatitude    | north_bound_latitude             | decimal   | northern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve north)  | +42.26  |
 
-## Temporal extent
+## ex_temporal_extent
 	
 | Metadata element name | Metadata element REST API syntax | Data type | Description        | Example             |
 |-----------------------|----------------------------------|-----------|--------------------|---------------------|
 | TimePeriodBegin       | time_period_begin                | date      | dataset start time | yyyy-mm-ddThh-mm-ss |
 | TimePeriodEnd         | time_period_end                  | date      | dataset end time   | yyyy-mm-ddThh-mm-ss |
 
-## Vertical extent
+## ex_vertical_extent
 
 | Metadata element name | Metadata element REST API syntax | Data type | Description                                                                  | Example                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------|-------------------------------|
@@ -134,7 +135,7 @@ Metadata related to the dataset.
 | maximumValue          | maximum_value                    | Real      | highest vertical extent contained in the dataset (reach of instrument)       | station altitude + height agl |
 | unitOfMeasure         | unit_of_measure                  | String    | unit of measure (→WIS requires "m above sea level")                          | m above sea level             |
 
-## Content information
+## md_content_information
 
 | Metadata element name | Metadata element REST API syntax | Data type      | Description                                                                   | Example             |
 |-----------------------|----------------------------------|----------------|-------------------------------------------------------------------------------|---------------------|
@@ -142,7 +143,7 @@ Metadata related to the dataset.
 | contentType           | content_type                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | physicalMeasurement |
 
 
-### Distribution informaition (online resource)
+### md_distribution_information
 
 | Metadata element name  | Metadata element REST API syntax | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -156,7 +157,7 @@ Metadata related to the dataset.
 | isRestricted           | is_restricted                    | bool           | If authentication is required, True/False                                                                                                         | True                                                                                                                                                                                                                          |
 | restrictionDescription | restriction_description          | string         | Information on how to get access                                                                                                                  | Go to somepage.com/create_user                                                                                                                                                                                                |
 
-## Data quality information
+## dq_data_quality_information
 
 | Metadata element name | Metadata element REST API syntax | Data type       | Description                                                                                     | Example                                                                                                                                                      |
 |-----------------------|----------------------------------|-----------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -164,7 +165,7 @@ Metadata related to the dataset.
 | statement             | statement                        | string          | (→WIS requires "dataset" or "series", where "series" describes a collection of single datasets) | Data collected according to instrument specific standard operating procedures, checked on import into data base.                                             |
 | description           | description                      | string          | general explanation of the data producer's knowledge about the lineage of a dataset             | Regularly calibrated by instrument operator, manually quality assured by instrument operator, boundary checked by data centre, outlier check by data centre. |
 
-## Other
+## md_actris_specific
 
 | Metadata element name    | Metadata element REST API syntax | Data type | Description                                                                                 | Example                      |
 |--------------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|------------------------------|
