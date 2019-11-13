@@ -86,9 +86,9 @@ Metadata related to the dataset.
 
 | Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                 | Example                                     |
 |-----------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|---------------------------------------------|
-| accessConstraints     | CodeList B.5.24                  | string    | access constraints of the published data                                                    | otherRestrictions                           |
-| useConstraints        | CodeList B.5.24                  | string    | any special restrictions or limitations or warnings on using the data                       | otherRestrictions                           |
-| otherConstraints      | string                           | string    | other restrictions and legal prerequisites for accessing and using the resource or metadata | https://www.gaw-wdca.org/Browse-Obtain-Data |
+| accessConstraints     | accessConstraints                  | string    | access constraints of the published data                                                    | otherRestrictions                           |
+| useConstraints        | use_constraints                  | string    | any special restrictions or limitations or warnings on using the data                       | otherRestrictions                           |
+| otherConstraints      | other_constraints                           | string    | other restrictions and legal prerequisites for accessing and using the resource or metadata | https://www.gaw-wdca.org/Browse-Obtain-Data |
 | dataLicence           | data_licence                     | string    | fixed list of available licences                                                            | To be decided                               |
 | metadataLicence       | metadata_licence                 | string    | fixed list of available licences                                                            | To be decided                               |
 
@@ -143,7 +143,7 @@ Metadata related to the dataset.
 | contentType           | content_type                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | physicalMeasurement |
 
 
-### md_distribution_information
+## md_distribution_information
 
 | Metadata element name  | Metadata element REST API syntax | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
