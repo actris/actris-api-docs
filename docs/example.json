@@ -1,78 +1,89 @@
 {
-	"md_metadata": {
-		"file_identifier": "EBAS240209145",
-		"language": "en",
-		"character_set": "utf8",
-		"hierarchy_level": "dataset",
-		"datestamp": "2012-05-20T09:45:00",
-		"contact": {
-			"individual_name": ["Fiebig, Markus, Dr."],
-			"organisation_name": ["Norwegian Institute for Air Research"],
-			"position_name": ["Senior Scientist"],
-			"role_code": ["custodian"],
-			"delivery_point": ["Insituttveien 18"],
-			"address_city": ["Kjeller"],
-			"administrative_area": ["Viken"],
-			"postal_code": ["2007"],
-			"country": ["Norway"],
-			"email": ["some.name@email.com"]
-		},
-		"online_resource": {
-			"linkage": "https://www.nilu.no/"
-		}
-	},
-	"md_identification": {
-		"abstract": "Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. Parameters measured are: particle_number_size_distribution in pm1.",
-		"title": "Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps",
-		"identifier": "",
-		"date": "",
-		"date_type": "",
-		"contact": {
-			"individual_name": ["Fiebig, Markus, Dr."],
-			"organisation_name": ["Norwegian Institute for Air Research"],
-			"position_name": ["Senior Scientist"],
-			"role_code": ["custodian"],
-			"delivery_point": ["Insituttveien 18"],
-			"address_city": ["Kjeller"],
-			"administrative_area": ["Viken"],
-			"postal_code": ["2007"],
-			"country": ["Norway"],
-			"email": ["some.name@email.com"]
-
-
-		},
-		"online_resource": {
-			"linkage": "http://ebas.nilu.no/"
-		}
-	},
-	"md_constraints": {
-		"accessConstraints": "otherRestrictions",
-		"useConstraints": "otherRestrictions",
-		"otherConstraints": "ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA:",
-		"dataLicence": "CC-BY 4.0",
-		"metadataLicence": "CC0"
-	},
-	"md_keywords": {
-		"keywords": ["NO0042G", "Zeppelin mountain (Ny-Ålesund)", "pm10", "particle_number_size_distribution", "GAW-WDCA", "ACTRIS", "EMEP", "NILU"]
-
-	},
-	"md_data_identification": {
-		"language": "en",
-		"character_set": "utf8",
-		"topic_category": "climatologyMeteorologyAtmosphere",
-		"description": "time series of point measurements at surface",
-		"station_wmo_region": "VI - Europe",
-		"country_name": "Norway",
-		"station_name": "Birkenes",
-		"station_identifier": "BIR"
-
-	},
-	"ex_geographic_bounding_box": {
-		"west_bound_longitude": "+3.12",
-		"east_bound_longitude": "+3.13",
-		"south_bound_latitude": "+42.25",
-		"north_bound_latitude": "+42.26"
-	},
+   "md_metadata":{
+      "file_identifier":"EBAS240209145",
+      "language":"en",
+      "hierarchy_level":"dataset",
+      "datestamp":"2019-11-20T07:45:17+00:00",
+      "contact":[
+         {
+            "individual_name":"Fiebig, Markus, Dr.",
+			"first_name" : "Markus",
+			"last_name" : "Fiebig",
+            "organisation_name":"Norwegian Institute for Air Research",
+            "position_name":"Senior Scientist",
+            "role_code":"custodian",                                                
+            "delivery_point":"Insituttveien 18",
+            "address_city":"Kjeller",
+            "administrative_area":"Viken",
+            "postal_code":"2007",
+            "country":"Norway",
+            "email":"some.name@email.com"
+         }
+      ],
+      "online_resource":{
+         "linkage":"https://www.nilu.no/"
+      }
+   },
+   "md_identification":{
+      "abstract":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. Parameters measured are: particle_number_size_distribution in pm1.",
+      "title":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps",
+      "identifier":"",
+      "date":"",
+      "date_type":"",
+      "contact":[
+         {
+            "individual_name":"Fiebig, Markus, Dr.",
+			"first_name" : "Markus",
+			"last_name" : "Fiebig",
+            "organisation_name":"Norwegian Institute for Air Research",
+            "position_name":"Senior Scientist",
+            "role_code":"custodian",                                                
+            "delivery_point":"Insituttveien 18",
+            "address_city":"Kjeller",
+            "administrative_area":"Viken",
+            "postal_code":"2007",
+            "country":"Norway",
+            "email":"some.name@email.com"
+         }
+      ],
+      "online_resource":{
+         "linkage":"http://ebas.nilu.no/"
+      }
+   },
+   "md_constraints":{
+      "accessConstraints":"otherRestrictions",
+      "useConstraints":"otherRestrictions",
+      "otherConstraints":"ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA:",
+      "dataLicence":"CC-BY 4.0",
+      "metadataLicence":"CC0"
+   },
+   "md_keywords":{
+      "keywords":[
+         "NO0042G",
+         "Zeppelin mountain (Ny-Ålesund)",
+         "pm10",
+         "particle_number_size_distribution",
+         "GAW-WDCA",
+         "ACTRIS",
+         "EMEP",
+         "NILU"
+      ]
+   },
+   "md_data_identification":{
+      "language":"en",
+      "topic_category":"climatologyMeteorologyAtmosphere",
+      "description":"time series of point measurements at surface",
+      "station_wmo_region":"VI - Europe",
+      "country_name":"Norway",
+      "station_name":"Birkenes",
+      "station_identifier":"BIR"
+   },
+   "ex_geographic_bounding_box":{
+      "west_bound_longitude": 3.12,
+      "east_bound_longitude": 3.13,
+      "south_bound_latitude": 42.25,
+      "north_bound_latitude": 42.26
+   },
 	"ex_temporal_extent": {
 		"time_period_begin": "",
 		"time_period_end": ""

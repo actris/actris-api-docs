@@ -1,0 +1,129 @@
+{
+   "md_metadata":{
+      "file_identifier":"EBAS240209145", // mandatory
+      "language":"en", // mandatory
+      "hierarchy_level":"dataset", // mandatory ['attribute','attributeType','collectionHardware','collectionSession','dataset','series','nonGeographicDataset','dimensionGroup','feature','featureType','propertyType','fieldSession','software','service','model','tile']
+      "datestamp":"2019-11-20T07:45:17+00:00", // mandatory, iso 8601 UTC
+      "contact":[
+         {
+			"first_name" : "Markus", // mandatory
+			"last_name" : "Fiebig", // mandatory
+            "organisation_name":"Norwegian Institute for Air Research", // mandatory
+            "position_name":"Senior Scientist", // optional
+            "role_code":"custodian", // mandatory,['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author,]                                               
+            "delivery_point":"Insituttveien 18", // mandatory
+            "address_city":"Kjeller", // mandatory
+            "administrative_area":"Viken", // mandatory
+            "postal_code":"2007", // mandatory
+            "country":"Norway", // mandatory
+            "email":"some.name@email.com" // optional?
+         }
+      ],
+      "online_resource":{
+         "linkage":"https://www.nilu.no/" // mandatory
+      }
+   },
+   "md_identification":{
+      "abstract":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. Parameters measured are: particle_number_size_distribution in pm1.", // mandatory
+      "title":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps", // mandatory
+      "identifier":"https://doi.org/10.21336/some.doi.1", // optional
+      "date":"2019-11-20T08:45:17+00:00", // mandatory
+      "date_type":"revision", // mandatory, ['publication', 'revision', 'creation'] 
+      "contact":[
+         {
+			"first_name" : "Markus", // mandatory
+			"last_name" : "Fiebig", // mandatory
+            "organisation_name":"Norwegian Institute for Air Research", // mandatory
+            "position_name":"Senior Scientist", // optional
+            "role_code":"custodian", // mandatory,  ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author,]                                         
+            "delivery_point":"Insituttveien 18", // mandatory
+            "address_city":"Kjeller", // mandatory
+            "administrative_area":"Viken", // mandatory
+            "postal_code":"2007", // mandatory
+            "country":"Norway", // mandatory
+            "email":"some.name@email.com" // optional?
+         }
+      ],
+      "online_resource":{
+         "linkage":"http://ebas.nilu.no/" // mandatory
+      }
+   },
+   "md_constraints":{
+      "accessConstraints":"otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
+      "useConstraints":"otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
+      "otherConstraints":"ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA:", // mandatory
+      "dataLicence":"CC-BY 4.0", // optional
+      "metadataLicence":"CC0" // optional
+   },
+   "md_keywords":{ 
+      "keywords":[ 
+         "NO0042G",
+         "Zeppelin mountain (Ny-Ålesund)",
+         "pm10",
+         "particle_number_size_distribution",
+         "GAW-WDCA",
+         "ACTRIS",
+         "EMEP",
+         "NILU"
+      ] // mandatory
+   },
+   "md_data_identification":{
+      "language":"en", // mandatory
+      "topic_category":"climatologyMeteorologyAtmosphere", // mandatory, ['climatologyMeteorologyAtmosphere']
+      "description":"time series of point measurements at surface", // mandatory
+      "station_wmo_region":"VI - Europe",
+      "country_name":"Norway", // mandatory
+      "station_name":"Birkenes", // mandatory, fixed list will be provided
+      "station_identifier":"BIR" // mandatory, fixed list will be provided
+   },
+   "ex_geographic_bounding_box":{
+      "west_bound_longitude": 3.12, // mandatory
+      "east_bound_longitude": 3.13, // mandatory
+      "south_bound_latitude": 42.25, // mandatory
+      "north_bound_latitude": 42.26 // mandatory
+   },
+	"ex_temporal_extent": {
+		"time_period_begin": "2019-11-20T07:45:17+00:00", // mandatory, iso 8601
+		"time_period_end": "2019-11-20T09:45:17+00:00" // mandatory, iso 8601
+
+	},
+	"ex_vertical_extent": {
+		"minimum_value": 24.50, // optional
+		"maximum_value": 200.00, // optional
+		"unit_of_measure": "m above sea level" // optional
+	},
+	"md_content_information": {
+		"attribute_description": ["particle_extinction","backscatter"], // mandatory
+		"content_type": "physicalMeasurement" // mandatory
+	},
+	"md_distribution_information": {
+		"data_format": "netcdf", // mandatory, ['netcdf', 'nasaames']
+		"version_data_format": "4", // mandatory
+		"transfersize": 0.5, // optional
+		"dataset_url": "https://thredds.nilu.no/thredds/fileServer/ebas/NO0042G.20180101000000.20190508191242.dmps.particle_number_size_distribution.pm10.1y.1h.NO01L_NILU_DMPSmodel2_ZEP.NO01L_dmps_DMPS_ZEP01.lev2.nc", // mandatory
+		"protocol": "http", // mandatory, ['http', 'opendap']
+		"decsription": "Direct download of data file", // optional
+		"function": "download", // mandatory
+		"is_restricted": "True", // mandatory
+		"restriction_description": "Go to somepage.com/create_user" // optional
+
+	},
+	"dq_data_quality_information": {
+		"level": "dataset", # optinal,  ['attribute','attributeType','collectionHardware','collectionSession','dataset','series','nonGeographicDataset','dimensionGroup','feature','featureType','propertyType','fieldSession','software','service','model','tile']
+		"statement": "Data collected according to instrument specific standard operating procedures, checked on import into data base.", // optional
+		"description": "Regularly calibrated by instrument operator, manually quality assured by instrument operator, boundary checked by data centre, outlier check by data centre." // optional
+	},
+	"md_actris_specific": {
+		"platform_type": "surface_station", // mandatory, ["surface_station", "simulation_chamber", "ballon"]
+		"product_type": "observation", // mandatory, ["model", "observation", "fundamental_parameter"]
+		"matrix": "particle", // mandatory, ["cloud", "gas", "particle", "met"]
+		"sub_matrix": "pm10", // mandatory, need fixed list
+		"instrument_type": "dmps", // mandatory, need fixed list
+		"program_affiliation": "EMEP", // mandatory, need fixed list
+		"legacy_data": "False", // mandatory,
+		"data_level": 1, // mandatory [0,1,2,3]
+		"data_sublevel": 1.5, // optinal
+		"data_product": "Higher level data product" // mandatory, need fixed list
+	}
+
+}
