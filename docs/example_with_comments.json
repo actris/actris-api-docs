@@ -6,17 +6,17 @@
       "datestamp":"2019-11-20T07:45:17+00:00", // mandatory, iso 8601 UTC
       "contact":[
          {
-			"first_name" : "Markus", // mandatory
-			"last_name" : "Fiebig", // mandatory
+	    "first_name" : "Markus", // mandatory
+	    "last_name" : "Fiebig", // mandatory
             "organisation_name":"Norwegian Institute for Air Research", // mandatory
             "position_name":"Senior Scientist", // optional
-            "role_code":"custodian", // mandatory,['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author,]                                               
-            "delivery_point":"Insituttveien 18", // mandatory
-            "address_city":"Kjeller", // mandatory
-            "administrative_area":"Viken", // mandatory
-            "postal_code":"2007", // mandatory
+            "role_code":"custodian", // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
+            "delivery_point":"Insituttveien 18", // optional
+            "address_city":"Kjeller", // optional
+            "administrative_area":"Viken", // optional
+            "postal_code":"2007", // optional
             "country":"Norway", // mandatory
-            "email":"some.name@email.com" // optional?
+            "email":"some.name@email.com" // optional
          }
       ],
       "online_resource":{
@@ -31,17 +31,17 @@
       "date_type":"revision", // mandatory, ['publication', 'revision', 'creation'] 
       "contact":[
          {
-			"first_name" : "Markus", // mandatory
-			"last_name" : "Fiebig", // mandatory
+	    "first_name" : "Markus", // mandatory
+	    "last_name" : "Fiebig", // mandatory
             "organisation_name":"Norwegian Institute for Air Research", // mandatory
             "position_name":"Senior Scientist", // optional
-            "role_code":"custodian", // mandatory,  ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author,]                                         
-            "delivery_point":"Insituttveien 18", // mandatory
-            "address_city":"Kjeller", // mandatory
-            "administrative_area":"Viken", // mandatory
-            "postal_code":"2007", // mandatory
+            "role_code":"custodian", // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
+            "delivery_point":"Insituttveien 18", // optional
+            "address_city":"Kjeller", // optional
+            "administrative_area":"Viken", // optional
+            "postal_code":"2007", // optional
             "country":"Norway", // mandatory
-            "email":"some.name@email.com" // optional?
+            "email":"some.name@email.com" // optional
          }
       ],
       "online_resource":{
@@ -55,7 +55,7 @@
       "dataLicence":"CC-BY 4.0", // optional
       "metadataLicence":"CC0" // optional
    },
-   "md_keywords":{ 
+   "md_keywords":{  // use - GCMD science keywords, platforms and instruments (https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords) - this is a recommendation
       "keywords":[ 
          "NO0042G",
          "Zeppelin mountain (Ny-Ålesund)",
