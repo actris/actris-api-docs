@@ -107,7 +107,7 @@
 		"restriction" :
         	{
             		"set" : false // mandatory true | false
-            		"description" : "Go to somepage.com/create_user" // optional
+            		"description_url" : "Go to somepage.com/create_user" // optional
         	}
 	},
 	"dq_data_quality_information": { // optional
