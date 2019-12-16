@@ -10,7 +10,7 @@
 	    "last_name" : "Fiebig", // mandatory
             "organisation_name":"Norwegian Institute for Air Research", // mandatory
             "position_name":"Senior Scientist", // optional
-            "role_code":"custodian", // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
+            "role_code":["custodian"], // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
             "delivery_point":"Insituttveien 18", // optional
             "address_city":"Kjeller", // optional
             "administrative_area":"Viken", // optional
@@ -35,7 +35,7 @@
 	    "last_name" : "Fiebig", // mandatory
             "organisation_name":"Norwegian Institute for Air Research", // mandatory
             "position_name":"Senior Scientist", // optional
-            "role_code":"custodian", // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
+            "role_code":["originator","processor"], // mandatory, ['resourceProvider','custodian','owner,'user,'distributor,'originator,'pointOfContact,'principalInvestigator,'processor,'publisher,'author]
             "delivery_point":"Insituttveien 18", // optional
             "address_city":"Kjeller", // optional
             "administrative_area":"Viken", // optional
@@ -104,9 +104,11 @@
 		"protocol": "http", // mandatory, ['http', 'opendap']
 		"description": "Direct download of data file", // optional
 		"function": "download", // mandatory
-		"is_restricted": "True", // mandatory
-		"restriction_description": "Go to somepage.com/create_user" // optional
-
+		"restriction" :
+        	{
+            		"set" : false // mandatory true | false
+            		"description" : "Go to somepage.com/create_user" // optional
+        	}
 	},
 	"dq_data_quality_information": { // optional
 		"level": "dataset", # optinal,  ['attribute','attributeType','collectionHardware','collectionSession','dataset','series','nonGeographicDataset','dimensionGroup','feature','featureType','propertyType','fieldSession','software','service','model','tile']
