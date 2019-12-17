@@ -120,8 +120,8 @@
 		"product_type": "observation", // mandatory, ["model", "observation", "fundamental_parameter"]
 		"matrix": "particle", // mandatory, ["cloud", "gas", "particle", "met"]
 		"sub_matrix": "pm10", // mandatory, need fixed list
-		"instrument_type": "dmps", // mandatory, need fixed list
-		"program_affiliation": "EMEP", // mandatory, need fixed list
+		"instrument_type": ["dmps"], // mandatory, need fixed list
+		"program_affiliation": ["EMEP","GAW-WDCA"], // mandatory, need fixed list
 		"legacy_data": "False", // mandatory,
 		"data_level": 1, // mandatory [0,1,2,3]
 		"data_sublevel": 1.5, // optinal
