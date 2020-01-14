@@ -105,7 +105,7 @@
 		"description": "Direct download of data file", // optional
 		"function": "download", // mandatory
 		"restriction": {
-			"set": false // mandatory true | false
+			"set": false, // mandatory, true or false
 			"description_url": "Go to somepage.com/create_user" // optional
 		}
 	},
