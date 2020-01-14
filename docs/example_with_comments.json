@@ -49,11 +49,11 @@
 		}
 	},
 	"md_constraints": { // mandatory
-		"accessConstraints": "otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
-		"useConstraints": "otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
-		"otherConstraints": "ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA:", // mandatory
-		"dataLicence": "CC-BY 4.0", // optional
-		"metadataLicence": "CC0" // optional
+		"access_constraints": "otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
+		"use_constraints": "otherRestrictions", // mandatory, ['copyright','patent','patentPending','trademark','license','intellectualPropertyRights','restricted','otherRestrictions']
+		"other_constraints": "ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA:", // mandatory
+		"data_licence": "CC-BY 4.0", // optional
+		"metadata_licence": "CC0" // optional
 	},
 	"md_keywords": { // use - GCMD science keywords, platforms and instruments (https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords) - this is a recommendation
 		"keywords": [
