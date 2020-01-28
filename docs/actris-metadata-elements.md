@@ -1,17 +1,17 @@
 # ACTRIS metadata elements
 
-* [md_metadata](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_metadata)
-* [md_identification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification)
-* [md_constraints](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_constraints)
-* [md_keywords](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_keywords)
-* [md_data_identification](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#md_dataidentification-1)
-* [ex_geographic_bounding_box](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#geographicboundingbox)
-* [ex_temporal_extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#temporal-extent)
-* [ex_vertical_extent](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#vertical-extent)
-* [md_content_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#content-information)
-* [md_distribution_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#distribution-information)
-* [dq_data_quality_information](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#data-quality-information)
-* [md_actris_specific](https://github.com/actris/actris-api-docs/blob/master/docs/actris_metadata.md#other)
+* [md_metadata](#md_metadata)
+* [md_identification](#md_dataidentification)
+* [md_constraints](#md_constraints)
+* [md_keywords](#md_keywords)
+* [md_data_identification](#md_dataidentification-1)
+* [ex_geographic_bounding_box](#geographicboundingbox)
+* [ex_temporal_extent](#temporal-extent)
+* [ex_vertical_extent](#vertical-extent)
+* [md_content_information](#content-information)
+* [md_distribution_information](#distribution-information)
+* [dq_data_quality_information](#data-quality-information)
+* [md_actris_specific](#other)
 
 ## md_metadata
 
