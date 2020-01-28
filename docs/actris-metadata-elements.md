@@ -9,9 +9,9 @@
 * [ex_temporal_extent](#temporal-extent)
 * [ex_vertical_extent](#vertical-extent)
 * [md_content_information](#content-information)
-* [md_distribution_information](#distribution-information)
-* [dq_data_quality_information](#data-quality-information)
-* [md_actris_specific](#other)
+* [md_distribution_information](#md_distribution_information)
+* [dq_data_quality_information](#dq_data_quality_information)
+* [md_actris_specific](#md_actris_specific)
 
 ## md_metadata
 
@@ -120,52 +120,52 @@ Metadata related to the dataset.
 
 ## ex_temporal_extent
 	
-| Metadata element name | Metadata element REST API syntax | Data type | Description        | Example             |
+| Metadata element name | Obligation | Data type | Description        | Example             |
 |-----------------------|----------------------------------|-----------|--------------------|---------------------|
-| TimePeriodBegin       | time_period_begin                | date      | dataset start time | yyyy-mm-ddThh-mm-ss |
-| TimePeriodEnd         | time_period_end                  | date      | dataset end time   | yyyy-mm-ddThh-mm-ss |
+| time_period_begin       | mandatory                | date      | dataset start time (ISO 8601) | "2018-01-01T00:00:00" |
+| time_period_end         | mandatory                  | date      | dataset end time (ISO 8601)  | 2019-01-01T00:00:00 |
 
 ## ex_vertical_extent
 
-| Metadata element name | Metadata element REST API syntax | Data type | Description                                                                  | Example                       |
+| Metadata element name | Obligation | Data type | Description                                                                  | Example                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------|-------------------------------|
-| minimumValue          | minimum_value                    | Real      | lowest vertical extent contained in the dataset (altitude of the instrument) | station altitude + height agl |
-| maximumValue          | maximum_value                    | Real      | highest vertical extent contained in the dataset (reach of instrument)       | station altitude + height agl |
-| unitOfMeasure         | unit_of_measure                  | String    | unit of measure (→WIS requires "m above sea level")                          | m above sea level             |
+| minimum_value          | optional                    | Real      | lowest vertical extent contained in the dataset (altitude of the instrument) | null |
+| maximum_value          | optional                    | Real      | highest vertical extent contained in the dataset (reach of instrument)       | 475.0 |
+| unit_of_measure         | optional                  | String    | unit of measure (→WIS requires "m above sea level")                          | "m above sea level"             |
 
 ## md_content_information
 
-| Metadata element name | Metadata element REST API syntax | Data type      | Description                                                                   | Example             |
+| Metadata element name | Obligation | Data type      | Description                                                                   | Example             |
 |-----------------------|----------------------------------|----------------|-------------------------------------------------------------------------------|---------------------|
-| attributeDescription  | attribute_description            | string         | parameter name                                                                | air_temperature     |
-| contentType           | content_type                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | physicalMeasurement |
+| attribute_description  | mandatory            | string         | parameter name                                                                | ["particle_number_size_distribution"]     |
+| content_type           | mandatory                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | "physicalMeasurement" |
 
 
 ## md_distribution_information
 
-| Metadata element name  | Metadata element REST API syntax | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
+| Metadata element name  | Obligation | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name                   | data_format                      | String         | name of the data transfer format                                                                                                                  | netCDF                                                                                                                                                                                                                        |
-| version                | version_data_format              | String         | version of the format (data, number, etc)                                                                                                         | 4                                                                                                                                                                                                                             |
-| transferSize           | transfersize                     | Real           | estimated size of a unit in the specified transfer format, expressed in megabytes. The transfersize is > 0.0                                      | 0.3                                                                                                                                                                                                                           |
-| linkage                | dataset_url                      | URL            | location (address) for on-line access using Uniform Resource Locator address or similar addressing scheme such as http://www.statkart.no/isotc211 | https://thredds.nilu.no/thredds/fileServer/ebas/NO0042G.20171229200000.20190430232636.dmps.particle_number_size_distribution.pm10_non_volatile.16mo.1h.NO01L_DMPS_ZEP1_NRT.NO01L_dmps_DMPS_ZEP02_nonvol__lev0-proc-v0-2-0..nc |
-| protocol               | protocol                         | String         | connection protocol to be used                                                                                                                    | http                                                                                                                                                                                                                          |
-| description            | description                      | String         | detailed text description of what the online resource is/does                                                                                     | Direct download of data file (netCDF)                                                                                                                                                                                         |
-| function               | function                         | CodeList B.5.3 | code for function performed by the online resource                                                                                                | download                                                                                                                                                                                                                      |
+| data_format            | mandatory                      | String         | name of the data transfer format                                                                                                                  | netCDF                                                                                                                                                                                                                        |
+| version_data_format    | mandatory              | String         | version of the format (data, number, etc)                                                                                                         | 4                                                                                                                                                                                                                             |
+| transfersize           | optional                    | Real           | estimated size of a unit in the specified transfer format, expressed in megabytes. The transfersize is > 0.0                                      | 0.3                                                                                                                                                                                                                           |
+| dataset_url            | mandatory                      | URL            | location (address) for on-line access using Uniform Resource Locator address or similar addressing scheme such as http://www.statkart.no/isotc211 | https://thredds.nilu.no/thredds/fileServer/ebas/NO0042G.20171229200000.20190430232636.dmps.particle_number_size_distribution.pm10_non_volatile.16mo.1h.NO01L_DMPS_ZEP1_NRT.NO01L_dmps_DMPS_ZEP02_nonvol__lev0-proc-v0-2-0..nc |
+| protocol               | mandatory                        | String         | connection protocol to be used                                                                                                                    | http                                                                                                                                                                                                                          |
+| description            | optional                     | String         | detailed text description of what the online resource is/does                                                                                     | Direct download of data file (netCDF)                                                                                                                                                                                         |
+| function               | mandatory                         | CodeList B.5.3 | code for function performed by the online resource                                                                                                | download                                                                                                                                                                                                                      |
 
 ### restriction
-| Metadata element name  | Metadata element REST API syntax | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
+| Metadata element name  | Obligation | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| set           | is_restricted                    | bool           | If authentication is required, True/False                                                                                                         | True                                                                                                                                                                                                                          |
-| description_url | restriction_description          | string         | Information on how to get access                                                                                                                  | Go to somepage.com/create_user                                                                                                                                                                                                |
+| set           | mandatory                    | bool           | If authentication is required, True/False                                                                                                         | true                                                                                                                                                                                                                          |
+| description_url | optional          | string         | Information on how to get access                                                                                                                  | "https://somepage.com/create_user"                                                                                                                                                                                                |
 
 ## dq_data_quality_information
 
-| Metadata element name | Metadata element REST API syntax | Data type       | Description                                                                                     | Example                                                                                                                                                      |
+| Metadata element name | Obligation | Data type       | Description                                                                                     | Example                                                                                                                                                      |
 |-----------------------|----------------------------------|-----------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| level                 | level                            | CodeList B.5.25 | scope to which the metadata applies:                                                            | dataset                                                                                                                                                      |
-| statement             | statement                        | string          | (→WIS requires "dataset" or "series", where "series" describes a collection of single datasets) | Data collected according to instrument specific standard operating procedures, checked on import into data base.                                             |
-| description           | description                      | string          | general explanation of the data producer's knowledge about the lineage of a dataset             | Regularly calibrated by instrument operator, manually quality assured by instrument operator, boundary checked by data centre, outlier check by data centre. |
+| level                 | optional                            | CodeList B.5.25 | scope to which the metadata applies:                                                            | dataset                                                                                                                                                      |
+| statement             | optional                        | string          | (→WIS requires "dataset" or "series", where "series" describes a collection of single datasets) | Data collected according to instrument specific standard operating procedures, checked on import into data base.                                             |
+| description           | optional                      | string          | general explanation of the data producer's knowledge about the lineage of a dataset             | Regularly calibrated by instrument operator, manually quality assured by instrument operator, boundary checked by data centre, outlier check by data centre. |
 
 ## md_actris_specific
 
