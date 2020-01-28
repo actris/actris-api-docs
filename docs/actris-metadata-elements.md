@@ -17,9 +17,7 @@
 
 Metadata related to the metadata
 
-### Metadata specific metadata
-
-| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                                     | Example                                                              |
+| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                                   | Example                                                              |
 |-----------------------|----------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | fileIdentifier        | file_identifier                  | string    | Unique identifier for this metadata file, following internal file naming convention                             | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
 | language              | language                         | string    | language used for documenting metadata (WIS requires english ""en"")                                            | en                                                                   |
@@ -154,8 +152,12 @@ Metadata related to the dataset.
 | protocol               | protocol                         | String         | connection protocol to be used                                                                                                                    | http                                                                                                                                                                                                                          |
 | description            | description                      | String         | detailed text description of what the online resource is/does                                                                                     | Direct download of data file (netCDF)                                                                                                                                                                                         |
 | function               | function                         | CodeList B.5.3 | code for function performed by the online resource                                                                                                | download                                                                                                                                                                                                                      |
-| isRestricted           | is_restricted                    | bool           | If authentication is required, True/False                                                                                                         | True                                                                                                                                                                                                                          |
-| restrictionDescription | restriction_description          | string         | Information on how to get access                                                                                                                  | Go to somepage.com/create_user                                                                                                                                                                                                |
+
+### restriction
+| Metadata element name  | Metadata element REST API syntax | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
+|------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| set           | is_restricted                    | bool           | If authentication is required, True/False                                                                                                         | True                                                                                                                                                                                                                          |
+| description_url | restriction_description          | string         | Information on how to get access                                                                                                                  | Go to somepage.com/create_user                                                                                                                                                                                                |
 
 ## dq_data_quality_information
 
@@ -167,16 +169,15 @@ Metadata related to the dataset.
 
 ## md_actris_specific
 
-| Metadata element name    | Metadata element REST API syntax | Data type | Description                                                                                 | Example                      |
+| Metadata element name    | Obligation | Data type | Description                                                                                 | Example                      |
 |--------------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|------------------------------|
-| platformType             | platform_type                    | string    | Platform type as fixed list of keywords ['surface_station', 'simulation_chamber', 'ballon'] | surface_station              |
-| productType              | product_type                     | string    | Product type as fixed list of keywords ['model', 'observation', 'fundamental_parameter']    | model                        |
-| matrix/topic/compartment | matrix/topic/compartment         | string    | Matrix as fixed list ['cloud', 'gas', 'particle', 'met']                                    | particle                     |
-| subMatrix                | sub_matrix                       | string    | ?                                                                                           | ?                            |
-| instrumentType           | instrument_type                  | string    | Fixed list to be defined. Must allow for multiple instruments.                              | filter_absorption_photometer |
-| programAffiliation       | program_affiliation              | string    | Fixed list of affiliated programs                                                           | EMEP                         |
-| legacyData               | legacy_data                      | bool      | if data is acquired before the ACTRIS RI was initiated.                                     | False                        |
-| dataLevel                | data level                       | int       | Data level as they are defined in the ACTRIS DMP                                            | 1                            |
-| dataSublevel             | data_sublevel                    | float     | More detailed definition of data level, e.g. 1.5 for EBAS NRT data                          | 1.5                          |
-| dataProduct              | data_product                     | string    | Fixed list of data products                                                                 | growth_factor                |
-	
+| platform_type             | mandatory                    | string    | Platform type as fixed list of keywords ['surface_station', 'simulation_chamber', 'ballon'] | "surface_station"              |
+| product_type              | mandatory                     | string    | Product type as fixed list of keywords ['model', 'observation', 'fundamental_parameter']    | "observation"                        |
+| matrix                    | mandatory         | string    | Matrix as fixed list ['cloud', 'gas', 'particle', 'met']                                    | "particle"                     |
+| sub_matrix                | mandatory                       | string    |                                                                                            | "pm10"                            |
+| instrument_type           | mandatory                  | string    | Fixed list of instruments                              | "filter_absorption_photometer" |
+| program_affiliation       | mandatory              | string    | Fixed list of affiliated programs                                                           | ["EMEP"]                        |
+| legacy_data               | mandatory                      | bool      | If data is acquired before the ACTRIS RI was initiated.                                     | false                        |
+| data_level                | mandatory                       | int       | Data level as they are defined in the ACTRIS DMP                                            | 1                            |
+| data_sublevel             | optional                    | float     | More detailed definition of data level, e.g. 1.5 for EBAS NRT data                          | 1.5                          |
+| data_product              | mandatory                     | string    | Fixed list of data products                                                                 | "quality assured data"                |
