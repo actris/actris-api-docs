@@ -92,31 +92,31 @@ Metadata related to the dataset.
 
 ## md_keywords
 
-| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                          | Example                           |
+| Metadata Element Name | Obligation | Data type | Description                                                                          | Example                           |
 |-----------------------|----------------------------------|-----------|--------------------------------------------------------------------------------------|-----------------------------------|
-| keyword               | keyword                          | string    | keyword(s) describing the theme of the dataset, preferably from the WMO keyword list | Aerosol, Atmospheric, Measurement |
+| keyword               | mandatory                          | string    | keyword(s) describing the theme of the dataset, preferably from the WMO keyword list | ["NO0042G,", "Zeppelin", "mountain", "(Ny-\u00c5lesund),", "pm10,", "particle_number_size_distribution,", "GAW-WDCA,", "ACTRIS,", "EMEP,", "NILU"] |
 
 ## md_data_identification
 
-| Metadata element name | Metadata element REST API syntax | Data type       | Description                                                     | Example                                      |
+| Metadata element name | Obligation | Data type       | Description                                                     | Example                                      |
 |-----------------------|----------------------------------|-----------------|-----------------------------------------------------------------|----------------------------------------------|
-| language              | language                         | string          | language used within the dataset                                | en                                           |
-| characterSet          | character_set                    | CodeList B.5.10 | full name of the character coding standard used for the dataset | utf8                                         |
-| topicCategory         | topic_category                   | CodeList B.5.27 | main theme(s) of the dataset                                    | climatologyMeteorologyAtmosphere             |
-| description           | description                      | string          | description of spatial and temporal extent for the dataset      | time series of point measurements at surface |
-| code                  | station_wmo_region               | string          | Station WMO region                                              | VI - Europe                                  |
-| code                  | country_name                     | string          | country the measurement site is located in (in english)         | Norway                                       |
-| code                  | station_name                     | string          | Name of station, platform or observatory                        | Birkenes                                     |
-| code                  | station_identifier               | string          | Identifier of station/observatory based on GAW-ID               | BIR                                          |
+| language              | mandatory                         | string          | language used within the dataset                                | en                                           |
+| characterSet          | mandatory                    | CodeList B.5.10 | full name of the character coding standard used for the dataset | utf8                                         |
+| topicCategory         | mandatory                   | CodeList B.5.27 | main theme(s) of the dataset                                    | climatologyMeteorologyAtmosphere             |
+| description           | mandatory                      | string          | description of spatial and temporal extent for the dataset      | time series of point measurements at surface |
+| code                  | mandatory               | string          | Station WMO region                                              | VI - Europe                                  |
+| code                  | mandatory                     | string          | country the measurement site is located in (in english)         | Norway                                       |
+| code                  | mandatory                     | string          | Name of station, platform or observatory                        | Birkenes                                     |
+| code                  | mandatory               | string          | Identifier of station/observatory based on GAW-ID               | BIR                                          |
 
 ## ex_geographic_bounding_box
 
-| Metadata element name | Metadata element REST API syntax | Data type | Description                                                                                                                            | Example |
+| Metadata element name | Obligation | Data type | Description                                                                                                                            | Example |
 |-----------------------|----------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------|---------|
-| westBoundLongitude    | west_bound_longitude             | decimal   | western-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | +3.12   |
-| eastBoundLongitude    | east_bound_longitude             | decimal   | eastern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | +3.13   |
-| southBoundLatitude    | south_bound_latitude             | decimal   | southern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve northt) | +42.25  |
-| northBoundLatitude    | north_bound_latitude             | decimal   | northern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve north)  | +42.26  |
+| west_bound_longitude    | mandatory             | decimal   | western-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | 11.88934   |
+| east_bound_longitude    | mandatory             | decimal   | eastern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve east)    | 11.88934   |
+| south_bound_latitude    | mandatory             | decimal   | southern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve northt) | 78.90669  |
+| north_bound_latitude    | mandatory             | decimal   | northern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve north)  | 78.90669  |
 
 ## ex_temporal_extent
 	
