@@ -113,9 +113,9 @@
 		"description": "processing_level_test" // optional
 	}, 
 	"md_actris_specific": { // mandatory
-		"platform_type": "surface_station", // mandatory
-		"product_type": "observation", // mandatory
-		"matrix": "particle", // mandatory
+		"platform_type": "surface_station", // mandatory ["surface_station", "simulation_chamber", "ballon"]
+		"product_type": "observation", // mandatory ["model", "observation", "fundamental_parameter"]
+		"matrix": "particle", // mandatory ["cloud", "gas", "particle", "met"]
 		"sub_matrix": "pm10", // mandatory
 		"instrument_type": ["dmps"], // mandatory
 		"program_affiliation": ["ACTRIS"], // mandatory, fixed list ['ACTRIS', 'AMAP', 'AMAP_public','EUSAAR','EMEP','ACTRIS_preliminary','GAW-WDCA','GAW-WDCRG','NOAA-ESRL']
