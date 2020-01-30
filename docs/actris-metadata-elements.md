@@ -1,14 +1,14 @@
 # ACTRIS metadata elements
 
 * [md_metadata](#md_metadata)
-* [md_identification](#md_dataidentification)
+* [md_identification](#md_identification)
 * [md_constraints](#md_constraints)
 * [md_keywords](#md_keywords)
-* [md_data_identification](#md_dataidentification-1)
-* [ex_geographic_bounding_box](#geographicboundingbox)
-* [ex_temporal_extent](#temporal-extent)
-* [ex_vertical_extent](#vertical-extent)
-* [md_content_information](#content-information)
+* [md_data_identification](#md_data_identification-1)
+* [ex_geographic_bounding_box](#ex_geographic_bounding_box)
+* [ex_temporal_extent](#ex_temporal_extent)
+* [ex_vertical_extent](#ex_vertical_extent)
+* [md_content_information](#md_content_information)
 * [md_distribution_information](#md_distribution_information)
 * [dq_data_quality_information](#dq_data_quality_information)
 * [md_actris_specific](#md_actris_specific)
@@ -17,78 +17,80 @@
 
 Metadata related to the metadata
 
-| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                                   | Example                                                              |
+| Metadata Element Name | Obligation | Data type | Description                                                                                                   | Example                                                              |
 |-----------------------|----------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| fileIdentifier        | file_identifier                  | string    | Unique identifier for this metadata file, following internal file naming convention                             | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
-| language              | language                         | string    | language used for documenting metadata (WIS requires english ""en"")                                            | en                                                                   |
-| characterSet          | character_set                    | string    | Full name of the character coding standard used for the metadata set                                            | utf8                                                                 |
-| hierarchyLevel        | hierarchy_level                  | string    | scope to which the metadata applies: "dataset"" or ""series"", where ""series"" describes a collection datasets | dataset                                                              |
-| datestamp             | datestamp                        | date      | date that the metadata was created                                                                              | 2012-05-20T09:45:00                                                  |
+| fileIdentifier        | mandatory                  | string    | Unique identifier for this metadata file, following internal file naming convention                             | Mission.Sensor.Level.Specie.geoID.ProcessinLevel.Version.yyyymmdd.nc |
+| language              | mandatory                         | string    | language used for documenting metadata (WIS requires english ""en"")                                            | en                                                                   |
+| characterSet          | mandatory                    | string    | Full name of the character coding standard used for the metadata set                                            | utf8                                                                 |
+| hierarchyLevel        | mandatory                  | string    | scope to which the metadata applies: "dataset"" or ""series"", where ""series"" describes a collection datasets | dataset                                                              |
+| datestamp             | mandatory                        | date      | date that the metadata was created                                                                              | 2012-05-20T09:45:00                                                  |
 
 ### Contact
 
-| Metadata element name | Metadata Element REST API syntax | Data Type | Description                                                                                                      | Example                                                                                                       |
+| Metadata element name | Obligation | Data Type | Description                                                                                                      | Example                                                                                                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| individualName        | individual_name                  | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Fiebig, Markus, Dr.                                                                                           |
-| organisationName      | organisation_name                | string    | name of WDC host organisation                                                                                    | Norwegian Institute for Air Research                                                                          |
-| positionName          | position_name                    | string    | role or position of the responsible person within WDC host organisation (function, division)                     | Senior Scientist, Dept. Atmospheric and Climate Research (ATMOS), Norwegian Institute for Air Research (NILU) |
-| RoleCode              | role_code                        | string    | function performed by the WDC host organisation (select from dropdown list)                                      | custodian                                                                                                     |
-| deliveryPoint         | delivery_point                   | string    | street name and number                                                                                           | Instituttveien 18                                                                                             |
-| AddressCity           | address_city                     | string    | city                                                                                                             | Kjeller                                                                                                       |
-| administrativeArea    | administrative_area              | string    | state, province                                                                                                  | Viken                                                                                                         |
-| postalCode            | postal_code                      | string    | ZIP or other postal code                                                                                         | 2007                                                                                                          |
-| country               | country                          | string    | country                                                                                                          | Norway                                                                                                        |
-| electronicMailAddress | email                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
+| first_name        | mandatory                   | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Markus.                                                                                           |
+| last_name        | mandatory                   | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Fiebig                                                                                         |
+| organisation_name      | mandatory                 | string    | name of WDC host organisation                                                                                    | Norwegian Institute for Air Research                                                                          |
+| position_name          | optional                    | string    | role or position of the responsible person within WDC host organisation (function, division)                     | Senior Scientist, Dept. Atmospheric and Climate Research (ATMOS), Norwegian Institute for Air Research (NILU) |
+| role_code              | mandatory                        | string    | function performed by the WDC host organisation (select from dropdown list)                                      | custodian                                                                                                     |
+| delivery_point         | optional                   | string    | street name and number                                                                                           | Instituttveien 18                                                                                             |
+| address_city           | optional                     | string    | city                                                                                                             | Kjeller                                                                                                       |
+| administrative_area    | optional             | string    | state, province                                                                                                  | Viken                                                                                                         |
+| postal_code            | optional                      | string    | ZIP or other postal code                                                                                         | 2007                                                                                                          |
+| country               | mandatory                          | string    | country                                                                                                          | Norway                                                                                                        |
+| email | optional                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
 
 ### Online Resource
 
-| Metadata element name | Metadata Element REST API syntax | Data Type | Description                    | Example              |
+| Metadata element name | Obligation | Data Type | Description                    | Example              |
 |-----------------------|----------------------------------|-----------|--------------------------------|----------------------|
-| linkage               | linkage                          | URL       | web address of the data center | http://ebas.nilu.no/ |
+| linkage               | mandatory                          | URL       | web address of the data center | http://ebas.nilu.no/ |
 
 
 ## md_identification
 
 Metadata related to the dataset.
 
-| Metadata element name | Metadata element REST API syntax | Data type      | Description                                                                                                    | Example                                                                                                                                                                                           |
+| Metadata element name | Obligation | Data type      | Description                                                                                                    | Example                                                                                                                                                                                           |
 |-----------------------|----------------------------------|----------------|----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| abstract              | abstract                         | string         | short description of the dataset described (abstract)(e.g.: parameter, method, instrument, interval, site etc) | Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. Parameters measured are: particle_number_size_distribution in pm1. |
-| title                 | title                            | string         | name by which the cited reference is known                                                                     | EBAS.<station code>.<start date / time>.<revision date / time>.<component>.<matrix>.<period code>.<resolution code>.<data level>                                                                  |
-| identifier            | identifier                       | string         | value uniquely identifying an object within a namespace. DOI of the dataset, if available                      | https://doi.org/10.21336/gen.2                                                                                                                                                                    |
-| date                  | date                             | date           | reference date of the dataset                                                                                  | yyyy-mm-ddThh-mm-ss                                                                                                                                                                               |
-| dateType              | date_type                        | CodeList B.5.2 | event used for reference date                                                                                  | revision                                                                                                                                                                                          |
+| abstract              | mandatory                         | string         | short description of the dataset described (abstract)(e.g.: parameter, method, instrument, interval, site etc) | Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. Parameters measured are: particle_number_size_distribution in pm1. |
+| title                 | mandatory                            | string         | name by which the cited reference is known                                                                     | EBAS.<station code>.<start date / time>.<revision date / time>.<component>.<matrix>.<period code>.<resolution code>.<data level>                                                                  |
+| identifier            | optional                       | string         | value uniquely identifying an object within a namespace. DOI of the dataset, if available                      | https://doi.org/10.21336/gen.2                                                                                                                                                                    |
+| date                  | mandatory                             | date           | reference date of the dataset                                                                                  | yyyy-mm-ddThh-mm-ss                                                                                                                                                                               |
+| dateType              | mandatory                        | CodeList B.5.2 | event used for reference date                                                                                  | revision                                                                                                                                                                                          |
 
 ### Contact
 
-| Metadata element name | Metadata Element REST API syntax | Data Type | Description                                                                                                      | Example                                                                                                       |
+| Metadata element name | Obligation | Data Type | Description                                                                                                      | Example                                                                                                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| individualName        | individual_name                  | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Fiebig, Markus, Dr.                                                                                           |
-| organisationName      | organisation_name                | string    | name of WDC host organisation                                                                                    | Norwegian Institute for Air Research                                                                          |
-| positionName          | position_name                    | string    | role or position of the responsible person within WDC host organisation (function, division)                     | Senior Scientist, Dept. Atmospheric and Climate Research (ATMOS), Norwegian Institute for Air Research (NILU) |
-| RoleCode              | role_code                        | string    | function performed by the WDC host organisation (select from dropdown list)                                      | custodian                                                                                                     |
-| deliveryPoint         | delivery_point                   | string    | street name and number                                                                                           | Instituttveien 18                                                                                             |
-| AddressCity           | address_city                     | string    | city                                                                                                             | Kjeller                                                                                                       |
-| administrativeArea    | administrative_area              | string    | state, province                                                                                                  | Viken                                                                                                         |
-| postalCode            | postal_code                      | string    | ZIP or other postal code                                                                                         | 2007                                                                                                          |
-| country               | country                          | string    | country                                                                                                          | Norway                                                                                                        |
-| electronicMailAddress | email                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
+| first_name        | mandatory                   | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Markus.                                                                                           |
+| last_name        | mandatory                   | string    | name of the responsible person within WDC host organisation: surname, given name, title separated by a delimiter | Fiebig                                                                                         |
+| organisation_name      | mandatory                 | string    | name of WDC host organisation                                                                                    | Norwegian Institute for Air Research                                                                          |
+| position_name          | optional                    | string    | role or position of the responsible person within WDC host organisation (function, division)                     | Senior Scientist, Dept. Atmospheric and Climate Research (ATMOS), Norwegian Institute for Air Research (NILU) |
+| role_code              | mandatory                        | string    | function performed by the WDC host organisation (select from dropdown list)                                      | custodian                                                                                                     |
+| delivery_point         | optional                   | string    | street name and number                                                                                           | Instituttveien 18                                                                                             |
+| address_city           | optional                     | string    | city                                                                                                             | Kjeller                                                                                                       |
+| administrative_area    | optional             | string    | state, province                                                                                                  | Viken                                                                                                         |
+| postal_code            | optional                      | string    | ZIP or other postal code                                                                                         | 2007                                                                                                          |
+| country               | mandatory                          | string    | country                                                                                                          | Norway                                                                                                        |
+| email | optional                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
 
 ### Online Resource
 
-| Metadata element name | Metadata Element REST API syntax | Data Type | Description                    | Example              |
+| Metadata element name | Obligation | Data Type | Description                    | Example              |
 |-----------------------|----------------------------------|-----------|--------------------------------|----------------------|
-| linkage               | linkage                          | URL       | web address of the data center | http://ebas.nilu.no/ |
+| linkage               | mandatory                         | URL       | web address of the data center | http://ebas.nilu.no/ |
 
 ## md_constraints
 
-| Metadata Element Name | Metadata Element REST API syntax | Data type | Description                                                                                 | Example                                     |
+| Metadata Element Name | Obligation | Data type | Description                                                                                 | Example                                     |
 |-----------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|---------------------------------------------|
-| accessConstraints     | accessConstraints                  | string    | access constraints of the published data                                                    | otherRestrictions                           |
-| useConstraints        | use_constraints                  | string    | any special restrictions or limitations or warnings on using the data                       | otherRestrictions                           |
-| otherConstraints      | other_constraints                           | string    | other restrictions and legal prerequisites for accessing and using the resource or metadata | https://www.gaw-wdca.org/Browse-Obtain-Data |
-| dataLicence           | data_licence                     | string    | fixed list of available licences                                                            | To be decided                               |
-| metadataLicence       | metadata_licence                 | string    | fixed list of available licences                                                            | To be decided                               |
+| access_constraints     | mandatory                  | string    | access constraints of the published data                                                    | otherRestrictions                           |
+| use_constraints        | mandatory                  | string    | any special restrictions or limitations or warnings on using the data                       | otherRestrictions                           |
+| other_constraints      | mandatory                           | string    | other restrictions and legal prerequisites for accessing and using the resource or metadata | https://www.gaw-wdca.org/Browse-Obtain-Data |
+| data_licence           | optional                     | string    | fixed list of available licences                                                            | CC-BY 4.0                               |
+| metadata_licence       | optional                 | string    | fixed list of available licences                                                            | CC0                               |
 
 ## md_keywords
 
