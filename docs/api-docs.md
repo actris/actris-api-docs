@@ -34,7 +34,133 @@
 ### Response
 
 ```js
-[{"md_metadata":{"id":398,"file_identifier":"NO0042G.20180101000000.20190508191242.dmps.particle_number_size_distribution.pm10.1y.1h.NO01L_NILU_DMPSmodel2_ZEP.NO01L_dmps_DMPS_ZEP01.lev2.nc","language":"en","hierarchy_level":"dataset","online_resource":{"linkage":"https://www.nilu.no/"},"datestamp":"2019-05-08T17:12:42.0000000Z","created":"2020-01-31T08:12:25.0000000Z","contact":[{"first_name":"Markus","last_name":"Fiebig","organisation_name":"Norwegian Institute for Air Research (NILU)","role_code":["custodian"],"country":"Norway","delivery_point":"Insituttveien 18","address_city":"Kjeller","administrative_area":"Viken","postal_code":2007,"email":"ebas@nilu.no","position_name":"Senior Scientist"}]},"md_identification":{"abstract":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. These measurements are gathered as a part of the following projects ACTRIS, EMEP, NILU, GAW-WDCA and they are stored in the EBAS database (http://ebas.nilu.no/). Parameters measured are: particle_number_size_distribution in pm10","title":"Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps","date_type":"creation","contact":[{"first_name":"Markus","last_name":"Fiebig","organisation_name":"\"Norwegian Institute for Air Research","role_code":["principalInvestigator"],"country":"Norway","delivery_point":null,"address_city":null,"administrative_area":null,"postal_code":null,"email":"Markus.Fiebig@nilu.no","position_name":null},{"first_name":"Chris","last_name":"Lunder","organisation_name":" Atmosphere and Climate Department","role_code":["principalInvestigator"],"country":"Norway","delivery_point":null,"address_city":null,"administrative_area":null,"postal_code":null,"email":" crl@nilu.no","position_name":null}],"online_resource":{"linkage":"http://ebas.nilu.no/"},"identifier":"https://doi.org/10.21336/some.doi.1","date":"2019-05-08T17:12:42.0000000Z"},"md_constraints":{"access_constraints":"otherRestrictions","use_constraints":"otherRestrictions","other_constraints":"ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA: "},"md_keywords":{"keywords":["(Ny-Ålesund),","ACTRIS,","EMEP,","GAW-WDCA,","mountain","NILU","NO0042G,","particle_number_size_distribution,","pm10,","Zeppelin"]},"md_data_identification":{"language":"en","topic_category":"climatologyMeteorologyAtmosphere","description":"time series of point measurements at surface","station_wmo_region":"6","country_name":"Norway","station_name":"Zeppelin Mountain (Ny Ålesund)","station_identifier":"ZEP"},"ex_geographic_bounding_box":{"west_bound_longitude":11.88934,"east_bound_longitude":11.88934,"south_bound_latitude":78.90669,"north_bound_latitude":78.90669},"ex_temporal_extent":{"time_period_begin":"2017-12-31T23:00:00.0000000Z","time_period_end":"2018-12-31T23:00:00.0000000Z"},"ex_vertical_extent":{"minimum_value":null,"maximum_value":null,"unit_of_measure":"m above sea level"},"md_content_information":{"attribute_description":["particle_number_size_distribution"],"content_type":"physicalMeasurement"},"md_distribution_information":{"data_format":"NETCDF3_CLASSIC","version_data_format":"NETCDF3_CLASSIC","dataset_url":"https://thredds.nilu.no/thredds/dodsC/ebas/NO0042G.20180101000000.20190508191242.dmps.particle_number_size_distribution.pm10.1y.1h.NO01L_NILU_DMPSmodel2_ZEP.NO01L_dmps_DMPS_ZEP01.lev2.nc","protocol":"HTTP","function":"download","restriction":{"set":false,"description_url":"https://ebas-submit.nilu.no/Data-Policy"},"transfersize":null,"description":"Direct download of data file"},"md_actris_specific":{"platform_type":"surface_station","product_type":"observation","matrix":"particle","sub_matrix":"pm10","instrument_type":["dmps"],"program_affiliation":["ACTRIS"],"legacy_data":false,"data_level":2,"data_product":"quality assured data","data_sublevel":null},"dq_data_quality_information":{"level":"dataset","statement":"Data collected according to instrument specific standard operating procedures, checked on import into data base.","description":"processing_level_test"}}]
+[{
+	"md_metadata": {
+		"id": 398,
+		"file_identifier": "NO0042G.20180101000000.20190508191242.dmps.particle_number_size_distribution.pm10.1y.1h.NO01L_NILU_DMPSmodel2_ZEP.NO01L_dmps_DMPS_ZEP01.lev2.nc",
+		"language": "en",
+		"hierarchy_level": "dataset",
+		"online_resource": {
+			"linkage": "https://www.nilu.no/"
+		},
+		"datestamp": "2019-05-08T17:12:42.0000000Z",
+		"created": "2020-01-31T08:12:25.0000000Z",
+		"contact": [{
+			"first_name": "Markus",
+			"last_name": "Fiebig",
+			"organisation_name": "Norwegian Institute for Air Research (NILU)",
+			"role_code": ["custodian"],
+			"country": "Norway",
+			"delivery_point": "Insituttveien 18",
+			"address_city": "Kjeller",
+			"administrative_area": "Viken",
+			"postal_code": 2007,
+			"email": "ebas@nilu.no",
+			"position_name": "Senior Scientist"
+		}]
+	},
+	"md_identification": {
+		"abstract": "Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps. These measurements are gathered as a part of the following projects ACTRIS, EMEP, NILU, GAW-WDCA and they are stored in the EBAS database (http://ebas.nilu.no/). Parameters measured are: particle_number_size_distribution in pm10",
+		"title": "Ground based in situ observations of particle_number_size_distribution at Zeppelin mountain (Ny-Ålesund) (NO0042G) using dmps",
+		"date_type": "creation",
+		"contact": [{
+			"first_name": "Markus",
+			"last_name": "Fiebig",
+			"organisation_name": "\"Norwegian Institute for Air Research",
+			"role_code": ["principalInvestigator"],
+			"country": "Norway",
+			"delivery_point": null,
+			"address_city": null,
+			"administrative_area": null,
+			"postal_code": null,
+			"email": "Markus.Fiebig@nilu.no",
+			"position_name": null
+		}, {
+			"first_name": "Chris",
+			"last_name": "Lunder",
+			"organisation_name": " Atmosphere and Climate Department",
+			"role_code": ["principalInvestigator"],
+			"country": "Norway",
+			"delivery_point": null,
+			"address_city": null,
+			"administrative_area": null,
+			"postal_code": null,
+			"email": " crl@nilu.no",
+			"position_name": null
+		}],
+		"online_resource": {
+			"linkage": "http://ebas.nilu.no/"
+		},
+		"identifier": "https://doi.org/10.21336/some.doi.1",
+		"date": "2019-05-08T17:12:42.0000000Z"
+	},
+	"md_constraints": {
+		"access_constraints": "otherRestrictions",
+		"use_constraints": "otherRestrictions",
+		"other_constraints": "ACTRIS: http://actris.nilu.no/Content/Documents/DataPolicy.pdf, EMEP: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., NILU: Public open access. We encourage contacting data originators if substatial use of individual time series is planned (fair use data policy)., GAW-WDCA: "
+	},
+	"md_keywords": {
+		"keywords": ["(Ny-Ålesund),", "ACTRIS,", "EMEP,", "GAW-WDCA,", "mountain", "NILU", "NO0042G,", "particle_number_size_distribution,", "pm10,", "Zeppelin"]
+	},
+	"md_data_identification": {
+		"language": "en",
+		"topic_category": "climatologyMeteorologyAtmosphere",
+		"description": "time series of point measurements at surface",
+		"station_wmo_region": "6",
+		"country_name": "Norway",
+		"station_name": "Zeppelin Mountain (Ny Ålesund)",
+		"station_identifier": "ZEP"
+	},
+	"ex_geographic_bounding_box": {
+		"west_bound_longitude": 11.88934,
+		"east_bound_longitude": 11.88934,
+		"south_bound_latitude": 78.90669,
+		"north_bound_latitude": 78.90669
+	},
+	"ex_temporal_extent": {
+		"time_period_begin": "2017-12-31T23:00:00.0000000Z",
+		"time_period_end": "2018-12-31T23:00:00.0000000Z"
+	},
+	"ex_vertical_extent": {
+		"minimum_value": null,
+		"maximum_value": null,
+		"unit_of_measure": "m above sea level"
+	},
+	"md_content_information": {
+		"attribute_description": ["particle_number_size_distribution"],
+		"content_type": "physicalMeasurement"
+	},
+	"md_distribution_information": {
+		"data_format": "NETCDF3_CLASSIC",
+		"version_data_format": "NETCDF3_CLASSIC",
+		"dataset_url": "https://thredds.nilu.no/thredds/dodsC/ebas/NO0042G.20180101000000.20190508191242.dmps.particle_number_size_distribution.pm10.1y.1h.NO01L_NILU_DMPSmodel2_ZEP.NO01L_dmps_DMPS_ZEP01.lev2.nc",
+		"protocol": "HTTP",
+		"function": "download",
+		"restriction": {
+			"set": false,
+			"description_url": "https://ebas-submit.nilu.no/Data-Policy"
+		},
+		"transfersize": null,
+		"description": "Direct download of data file"
+	},
+	"md_actris_specific": {
+		"platform_type": "surface_station",
+		"product_type": "observation",
+		"matrix": "particle",
+		"sub_matrix": "pm10",
+		"instrument_type": ["dmps"],
+		"program_affiliation": ["ACTRIS"],
+		"legacy_data": false,
+		"data_level": 2,
+		"data_product": "quality assured data",
+		"data_sublevel": null
+	},
+	"dq_data_quality_information": {
+		"level": "dataset",
+		"statement": "Data collected according to instrument specific standard operating procedures, checked on import into data base.",
+		"description": "processing_level_test"
+	}
+}]
 ```
 
 ### Errors
