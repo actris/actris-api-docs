@@ -10,9 +10,9 @@
 
 ### Parameters
 
-## md_metadata
+#### md_metadata
 
-Metadata related to the metadata
+
 
 | Parameter | Required | Data type | Description                                                                                                   | Example                                                              |
 |-----------------------|----------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -22,7 +22,7 @@ Metadata related to the metadata
 | hierarchyLevel        | mandatory                  | string    | scope to which the metadata applies: "dataset"" or ""series"", where ""series"" describes a collection datasets | dataset                                                              |
 | datestamp             | mandatory                        | date      | date that the metadata was created                                                                              | 2012-05-20T09:45:00                                                  |
 
-### Contact
+##### Contact
 
 | Parameter | Required | Data Type | Description                                                                                                      | Example                                                                                                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -38,14 +38,14 @@ Metadata related to the metadata
 | country               | mandatory                          | string    | country                                                                                                          | Norway                                                                                                        |
 | email | optional                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
 
-### Online Resource
+##### Online Resource
 
 | Parameter | Required | Data Type | Description                    | Example              |
 |-----------------------|----------------------------------|-----------|--------------------------------|----------------------|
 | linkage               | mandatory                          | URL       | web address of the data center | http://ebas.nilu.no/ |
 
 
-## md_identification
+##### md_identification
 
 Metadata related to the dataset.
 
@@ -57,7 +57,7 @@ Metadata related to the dataset.
 | date                  | mandatory                             | date           | reference date of the dataset                                                                                  | yyyy-mm-ddThh-mm-ss                                                                                                                                                                               |
 | dateType              | mandatory                        | CodeList B.5.2 | event used for reference date                                                                                  | revision                                                                                                                                                                                          |
 
-### Contact
+##### Contact
 
 | Parameter | Required | Data Type | Description                                                                                                      | Example                                                                                                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -73,13 +73,13 @@ Metadata related to the dataset.
 | country               | mandatory                          | string    | country                                                                                                          | Norway                                                                                                        |
 | email | optional                            | string    | email address of the responsible organization or individual                                                      | some.name@email.com                                                                                           |
 
-### Online Resource
+##### Online Resource
 
 | Parameter | Required | Data Type | Description                    | Example              |
 |-----------------------|----------------------------------|-----------|--------------------------------|----------------------|
 | linkage               | mandatory                         | URL       | web address of the data center | http://ebas.nilu.no/ |
 
-## md_constraints
+#### md_constraints
 
 | Parameter | Required | Data type | Description                                                                                 | Example                                     |
 |-----------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|---------------------------------------------|
@@ -89,13 +89,13 @@ Metadata related to the dataset.
 | data_licence           | optional                     | string    | fixed list of available licences                                                            | CC-BY 4.0                               |
 | metadata_licence       | optional                 | string    | fixed list of available licences                                                            | CC0                               |
 
-## md_keywords
+#### md_keywords
 
 | Parameter | Required | Data type | Description                                                                          | Example                           |
 |-----------------------|----------------------------------|-----------|--------------------------------------------------------------------------------------|-----------------------------------|
 | keyword               | mandatory                          | string    | keyword(s) describing the theme of the dataset, preferably from the WMO keyword list | ["NO0042G,", "Zeppelin", "mountain", "(Ny-\u00c5lesund),", "pm10,", "particle_number_size_distribution,", "GAW-WDCA,", "ACTRIS,", "EMEP,", "NILU"] |
 
-## md_data_identification
+#### md_data_identification
 
 | Parameter | Required | Data type       | Description                                                     | Example                                      |
 |-----------------------|----------------------------------|-----------------|-----------------------------------------------------------------|----------------------------------------------|
@@ -108,7 +108,7 @@ Metadata related to the dataset.
 | code                  | mandatory                     | string          | Name of station, platform or observatory                        | Birkenes                                     |
 | code                  | mandatory               | string          | Identifier of station/observatory based on GAW-ID               | BIR                                          |
 
-## ex_geographic_bounding_box
+#### ex_geographic_bounding_box
 
 | Parameter | Required | Data type | Description                                                                                                                            | Example |
 |-----------------------|----------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------|---------|
@@ -117,14 +117,14 @@ Metadata related to the dataset.
 | south_bound_latitude    | mandatory             | decimal   | southern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve northt) | 78.90669  |
 | north_bound_latitude    | mandatory             | decimal   | northern-most coordinate of the limit of the dataset extent (bounding box), expressed in longitude in decimal degrees (positve north)  | 78.90669  |
 
-## ex_temporal_extent
+#### ex_temporal_extent
 	
 | Parameter | Required | Data type | Description        | Example             |
 |-----------------------|----------------------------------|-----------|--------------------|---------------------|
 | time_period_begin       | mandatory                | date      | dataset start time (ISO 8601) | "2018-01-01T00:00:00" |
 | time_period_end         | mandatory                  | date      | dataset end time (ISO 8601)  | 2019-01-01T00:00:00 |
 
-## ex_vertical_extent
+#### ex_vertical_extent
 
 | Parameter | Required | Data type | Description                                                                  | Example                       |
 |-----------------------|----------------------------------|-----------|------------------------------------------------------------------------------|-------------------------------|
@@ -132,7 +132,7 @@ Metadata related to the dataset.
 | maximum_value          | optional                    | Real      | highest vertical extent contained in the dataset (reach of instrument)       | 475.0 |
 | unit_of_measure         | optional                  | String    | unit of measure (→WIS requires "m above sea level")                          | "m above sea level"             |
 
-## md_content_information
+#### md_content_information
 
 | Parameter | Required | Data type      | Description                                                                   | Example             |
 |-----------------------|----------------------------------|----------------|-------------------------------------------------------------------------------|---------------------|
@@ -140,7 +140,7 @@ Metadata related to the dataset.
 | content_type           | mandatory                     | CodeList B5.12 | type of information represented by the cell value (select from dropdown list) | "physicalMeasurement" |
 
 
-## md_distribution_information
+#### md_distribution_information
 
 | Parameter  | Required | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,13 +152,13 @@ Metadata related to the dataset.
 | description            | optional                     | String         | detailed text description of what the online resource is/does                                                                                     | Direct download of data file (netCDF)                                                                                                                                                                                         |
 | function               | mandatory                         | CodeList B.5.3 | code for function performed by the online resource                                                                                                | download                                                                                                                                                                                                                      |
 
-### restriction
+##### restriction
 | Parameter  | Required | Data type      | Description                                                                                                                                       | Example                                                                                                                                                                                                                       |
 |------------------------|----------------------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | set           | mandatory                    | bool           | If authentication is required, True/False                                                                                                         | true                                                                                                                                                                                                                          |
 | description_url | optional          | string         | Information on how to get access                                                                                                                  | "https://somepage.com/create_user"                                                                                                                                                                                                |
 
-## dq_data_quality_information
+#### dq_data_quality_information
 
 | Parameter | Required | Data type       | Description                                                                                     | Example                                                                                                                                                      |
 |-----------------------|----------------------------------|-----------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ Metadata related to the dataset.
 | statement             | optional                        | string          | (→WIS requires "dataset" or "series", where "series" describes a collection of single datasets) | Data collected according to instrument specific standard operating procedures, checked on import into data base.                                             |
 | description           | optional                      | string          | general explanation of the data producer's knowledge about the lineage of a dataset             | Regularly calibrated by instrument operator, manually quality assured by instrument operator, boundary checked by data centre, outlier check by data centre. |
 
-## md_actris_specific
+#### md_actris_specific
 
 | Parameter    | Required | Data type | Description                                                                                 | Example                      |
 |--------------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------|------------------------------|
