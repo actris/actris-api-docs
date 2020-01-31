@@ -345,6 +345,9 @@ Content-Type: application/json
 
 ### Errors
 
+- **500** - Internal Server Error
+- **400** - Bad Request
+
 ## Get all metadata records
 
 ### URL
@@ -714,6 +717,9 @@ Content-Type: application/json
 
 ### Errors
 
+- **500** - Internal Server Error
+- **400** - Bad Request
+
 ## Get version
 
 ### URL
@@ -733,3 +739,6 @@ Content-Type: application/json
 ```
 
 ### Errors
+
+- **500** - Internal Server Error
+- **400** - Bad Request
