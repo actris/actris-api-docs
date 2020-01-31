@@ -184,6 +184,8 @@ Metadata related to the dataset.
 ### Response
 
 ```js
+HTTPS/1.1 201 OK
+Content-Type: application/json
 {
 	"Server": "nginx/1.10.3 (Ubuntu)",
 	"Date": "Fri, 31 Jan 2020 08:12:24 GMT",
@@ -210,6 +212,8 @@ Metadata related to the dataset.
 ### Response
 
 ```js
+HTTPS/1.1 200 OK
+Content-Type: application/json
 [{
 	"md_metadata": {
 		"id": 398,
@@ -352,6 +356,8 @@ Metadata related to the dataset.
 ### Response
 
 ```js
+HTTPS/1.1 200 OK
+Content-Type: application/json
 [{
 	"md_metadata": {
 		"id": 214,
@@ -719,7 +725,11 @@ Metadata related to the dataset.
 ### Response
 
 ```js
-{"build":"1.0.4"}
+HTTPS/1.1 200 OK
+Content-Type: application/json
+{
+	"build": "1.0.4"
+}
 ```
 
 ### Errors
