@@ -4,7 +4,7 @@
 * [md_identification](#md_identification)
 * [md_constraints](#md_constraints)
 * [md_keywords](#md_keywords)
-* [md_data_identification](#md_data_identification-1)
+* [md_data_identification](#md_data_identification)
 * [ex_geographic_bounding_box](#ex_geographic_bounding_box)
 * [ex_temporal_extent](#ex_temporal_extent)
 * [ex_vertical_extent](#ex_vertical_extent)
